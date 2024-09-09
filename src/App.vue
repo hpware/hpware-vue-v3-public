@@ -15,8 +15,8 @@ import NavSpace from '@/components/NavSpace.vue'
   <footer>
     <br><br>
     <a style="color:aqua" href="/Go?l=gh" target="_blank" rel="noopener">GitHub</a>&nbsp;
-    <a style="color:aqua"href="Go/?l=ig" target="_blank" rel="noopener">Instagram</a>&nbsp;
-    <a style="color:aqua" href="Go/?l=th" target="_blank" rel="noopener">Threads</a>&nbsp;
+    <a style="color:aqua"href="/Go/?l=ig" target="_blank" rel="noopener">Instagram</a>&nbsp;
+    <a style="color:aqua" href="/Go/?l=th" target="_blank" rel="noopener">Threads</a>&nbsp;
     <a style="color:aqua" href="/Go?l=oldsite" target="_blank" rel="noopener">舊網站</a>&nbsp;
     <a style="color:Goldenrod" href="/Go?l=em" target="_blank" rel="noopener">Email</a><br>
     <p>© {{ new Date().getFullYear() }} hpware</p>

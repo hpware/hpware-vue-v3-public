@@ -1,5 +1,5 @@
-<script setup lang="ts">
-const golink = new URLSearchParams(window.location.search).get('go');
+<script setup>
+const golink = new URLSearchParams(window.location.search).get('l');
 if (golink == "ig") {window.location.href = "https://www.instagram.com/yh_.5_26/"; }
 else if (golink == "gh") {window.location.href = "https://github.com/hpware";}
 else if (golink == "th") {window.location.href = "https://threads.net/yh_.5_26";}
