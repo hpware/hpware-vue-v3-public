@@ -24,7 +24,7 @@ import NavSpace from '@/components/NavSpace.vue'
     <span>Expo</span>
   </section>
   <hr>
-  <section id="stats">
+  <section id="stats" class="gitstats">
     <h3>GitHub Stats</h3>
     <img src="https://raw.githubusercontent.com/hpware/gitstats/master/generated/overview.svg#gh-dark-mode-only" />
     <img src="https://raw.githubusercontent.com/hpware/gitstats/master/generated/languages.svg#gh-dark-mode-only" />
@@ -44,13 +44,12 @@ import NavSpace from '@/components/NavSpace.vue'
   filter: drop-shadow(0 0 2em #444444aa);
 }
 .gitstats {
-  display: block;
-  margin: 0 auto 2rem;
-  transition: filter 300ms;
-
-}
-.gitstats:hover {
-  filter: drop-shadow(0 0 2em #444444aa);
+  img{
+    transition: filter 300ms;
+  }
+  img:hover {
+    filter: drop-shadow(0 0 2em #444444aa);
+  }
 }
 br.mobilei {
   display:none;
