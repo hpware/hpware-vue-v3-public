@@ -6,7 +6,7 @@
     <p>lovemusic.asia 網站 (<a style="color:aquamarine" href="/No-source-code">Source Code</a>)(<a href="https://www.lovemusic.asia">網站</a>)</p>
     <p>AdGuard Home Block & Allow lists (<a style="color:aquamarine" href="https://github.com/hpware/adguard-block-list">Source Code</a>)(<a href="https://hpware.github.io/adguard-block-list/">網站</a>)</p>
     <p>hwtw.cc 網站 (<a style="color:aquamarine" href="/No-source-code">Source Code</a>)(<a href="https://3002.hwtw.cc">網站</a>)</p>
-    <p>Linux 安裝腳本 (<a style="color:aquamarine" href="https://github.com/hpware/linux-install-scripts">Source Code</a>)</p>
+    <p>Linux 安裝腳本 (<a style="color:aquamarine" href="https://old.hwtw.cc/script/linux-install.txt">TXT Dump</a>)</p>
   </section>
   <hr>
   <section id="previous">
