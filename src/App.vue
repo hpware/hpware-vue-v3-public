@@ -1,13 +1,13 @@
-<script setup lang="ts">
+<script setup>
 import NavSpace from '@/components/NavSpace.vue'
 </script>
 <template>
   <nav>
     <h1>吳元皓</h1>
-    <RouterLink to="/">Home</RouterLink><NavSpace/>
+    <RouterLink to="/" :style="">Home</RouterLink><NavSpace/>
     <a href="https://yuanhau.com">Blog</a><NavSpace/>
-    <RouterLink to="/About">About</RouterLink><NavSpace/>
-    <RouterLink to="/Projects">Projects</RouterLink><span class="mobile">&nbsp;</span>
+    <RouterLink to="/About" :style="">About</RouterLink><NavSpace/>
+    <RouterLink to="/Projects" :style="">Projects</RouterLink><span class="mobile">&nbsp;</span>
   </nav>
   <main>
     <RouterView />
@@ -19,7 +19,7 @@ import NavSpace from '@/components/NavSpace.vue'
     <a style="color:aqua" href="/Go/?l=th" target="_blank" rel="noopener">Threads</a>&nbsp;
     <a style="color:aqua" href="/Go?l=oldsite" target="_blank" rel="noopener">舊網站</a>&nbsp;
     <a style="color:Goldenrod" href="/Go?l=em" target="_blank" rel="noopener">Email</a><br>
-    <p>© {{ new Date().getFullYear() }} hpware</p>
+    <p>&copy; {{ new Date().getFullYear() }} hpware</p>
   </footer>
 </template>
 
