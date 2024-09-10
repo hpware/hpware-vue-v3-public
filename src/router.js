@@ -16,7 +16,7 @@ routes.push(
     {
         path: '/.git/',
         name: 'Redirect to Repo',
-        redirect: '/Go?l=gh-repo',
+        redirect: '/你在找什麼',
     },
     {
     path: '/:pathMatch(.*)*',
