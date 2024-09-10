@@ -4,10 +4,10 @@ import NavSpace from '@/components/NavSpace.vue'
 <template>
   <nav>
     <h1>吳元皓</h1>
-    <RouterLink to="/" :style="">Home</RouterLink><NavSpace/>
+    <RouterLink to="/">Home</RouterLink><NavSpace/>
     <a href="https://yuanhau.com">Blog</a><NavSpace/>
-    <RouterLink to="/About" :style="">About</RouterLink><NavSpace/>
-    <RouterLink to="/Projects" :style="">Projects</RouterLink><span class="mobile">&nbsp;</span>
+    <RouterLink to="/About">About</RouterLink><NavSpace/>
+    <RouterLink to="/Projects">Projects</RouterLink><span class="mobile">&nbsp;</span>
   </nav>
   <main>
     <RouterView />
