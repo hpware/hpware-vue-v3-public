@@ -9,7 +9,11 @@ else if (golink == "em") {window.location.href = "mailto:hw@hwtw.cc"}
 else if (golink == "oldsite") {window.location.href = "https://3002.hwtw.cc"}
 else if (golink == "vercelcom") {window.location.href = "https://vercel.com"}
 else if (golink == "vitejsdev") {window.location.href = "https://vitejs.dev"}
+else {
+  getelementbyid("redirect").innerHTML = "錯誤! 未知的連結";
+}
 </script>
 <template>
-  <h1>Redirecting...</h1>
+  <h1 id="redirect">Redirecting...</h1>
+
 </template>

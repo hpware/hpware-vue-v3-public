@@ -12,7 +12,13 @@ const routes = Object.keys(pages).map((path) => {
     };
 });
 
-routes.push({
+routes.push(
+    {
+        path: '/.git/',
+        name: 'Redirect to Repo',
+        redirect: '/Go?l=gh-repo',
+    },
+    {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/Pages/OopsError.vue'),
@@ -24,7 +30,7 @@ routes.push({
 const router = createRouter({
     history: createWebHistory(),
     routes,
-    {path: '/**/Index', Redirect: "/**/"}
+
 });
 
 export default router;

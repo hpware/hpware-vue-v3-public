@@ -3,8 +3,8 @@
 
 <template>
   <h1>404</h1>
-  <p>Page not found</p>
-  <h2>You have landed in a sinkhole</h2>
+  <p>網頁不存在</p>
+  <h2>你已踏入一個所人未知的地方</h2>
 </template>
 
 <style scoped>
