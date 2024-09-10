@@ -21,7 +21,7 @@ import NavSpace from '@/components/NavSpace.vue'
     <span>Python</span> <br class="mobilei">
     <span>mySQL</span> <br class="mobilei">
     <span>NextJS</span> <br class="mobilei">
-    <span>React Expo</span>
+    <span>Expo</span>
   </section>
   <hr>
   <section id="stats">
