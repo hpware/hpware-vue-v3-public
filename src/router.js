@@ -24,6 +24,7 @@ routes.push({
 const router = createRouter({
     history: createWebHistory(),
     routes,
+    {path: '/**/Index', Redirect: "/**/"}
 });
 
 export default router;
