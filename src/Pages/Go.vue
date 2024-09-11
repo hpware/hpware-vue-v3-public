@@ -40,14 +40,14 @@ else if (goLink === "git") {
     if (repo) {
       window.location.href = `https://git.hwtw.cc/${Username}/${GitRepo}`;
     } else {
-      Document.getElementByid("redirect").innerHTML = "錯誤! 未知的連結";
+      Document.getElementById("redirect").innerHTML = "錯誤! 未知的連結";
     }
   } else {
-    Document.getElementByid("redirect").innerHTML = "錯誤! 未知的連結";
+    Document.getElementById("redirect").innerHTML = "錯誤! 未知的連結";
   }
 }
 else {
-  Document.getElementByid("redirect").innerHTML = "錯誤! 未知的連結";
+  Document.getElementById("redirect").innerHTML = "錯誤! 未知的連結";
 }
 </script>
 <template>
