@@ -1,24 +1,27 @@
 <script setup>
 const golink = new URLSearchParams(window.location.search).get('l');
-if (golink == "ig") {
+if (golink === "ig") {
   window.location.href = "https://www.instagram.com/yh_.5_26/";
 }
-else if (golink == "gh") {
+else if (golink === "gh") {
   window.location.href = "https://github.com/hpware";
 }
-else if (golink == "th") {
+else if (golink === "th") {
   window.location.href = "https://threads.net/yh_.5_26";
 }
-else if (golink == "em") {
-  window.location.href = "mailto:hw@yuanhau.com";
+else if (golink === "em") {
+  window.location.href = "mailto:web@yuanhau.com";
 }
-else if (golink == "oldsite") {
+else if (golink === "oldsite") {
   window.location.href = "https://3002.hwtw.cc"
 }
-else if (golink == "gh-repo") {
+else if (golink === "gh-repo") {
   window.location.href = "https://github.com/hpware/hpware-vue-v3"
 }
-else if (goLink == "blog") {
+else if (golink === "analytics") {
+  window.location.href= "https://vd.yuanhau.com"
+}
+else if (goLink === "blog") {
   const blogPost = new URLSearchParams(window.location.search).get('p');
   if (!blogPost) {
     window.location.href= `https://yuanhau.com/`;
@@ -28,7 +31,7 @@ else if (goLink == "blog") {
   }
 
 }
-else if (goLink == "git") {
+else if (goLink === "git") {
   const GitRepo = new URLSearchParams(window.location.search).get('repo');
   const Username = new URLSearchParams(window.location.search).get('user');
   if (!Username) {
