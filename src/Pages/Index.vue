@@ -3,29 +3,32 @@ import NavSpace from '@/components/NavSpace.vue'
 </script>
 <template>
   <img alt="hpware" class="logo" src="https://storage.hpware.hwtw.cc/img/index-pfp.png" />
-  <span>Pronouns: he/him</span><br>
+  <span>@hpware | @yh_.5_26 | @hwtw</span>
   <hr>
   <section id="mytools">
     <h3>使用的工具</h3>
-    <p>網頁: VS Code, Webstorm, Vim </p>
-    <p>Python: VS Code, PyCharm</p>
-    <p>OS: Windows 11, Ubuntu 24.01, MacOS</p>
+    <p>網頁: VSCode, Webstorm, Vim </p>
+    <p>Python: VSCode, PyCharm</p>
+    <p></p>
+    <p>OS: Windows 11, <del>Ubuntu 24.01</del>, MacOS, Debian 12</p>
     <p>Self Hosted: <a href="https://git.hwtw.cc">Git 伺服器 Gitea</a>(只是很爛)
-      <br class="mobilei"><a href="https://zz.yuanhau.com">檔案分享伺服器 Zipline</a>(不會到期)
-      <br class="mobilei"><a href="https://vd.yuanhau.com">使用者調查系統 Umami</a></p>
+      <br class="mobilei"><a href="https://zz.yuanhau.com">檔案分享伺服器 Zipline</a><NavSpace />
+      <a href="https://vd.yuanhau.com">使用者調查系統 Umami</a></p>
   </section>
   <hr>
   <section id="learn">
     <h3>我想學的</h3>
+    <span><del>C++(不想學)</del></span> <br class="mobilei">
     <span>VueJS</span> <br class="mobilei">
     <span>Python</span> <br class="mobilei">
     <span>mySQL</span> <br class="mobilei">
     <span>NextJS</span> <br class="mobilei">
-    <span>Expo</span>
+    <span>Expo</span> <br class="mobilei">
+    <span>Bash</span>
   </section>
   <hr>
   <section id="stats" class="gitstats">
-    <h3>GitHub Stats</h3>
+    <h3>GitHub 資料</h3>
     <img src="https://raw.githubusercontent.com/hpware/gitstats/master/generated/overview.svg#gh-dark-mode-only" />
     <img src="https://raw.githubusercontent.com/hpware/gitstats/master/generated/languages.svg#gh-dark-mode-only" />
 
