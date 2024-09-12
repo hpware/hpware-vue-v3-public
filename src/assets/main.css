@@ -44,12 +44,13 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #6bd3af;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 500ms ease-out;
 }
 button:hover {
   border-color: #646cff;
+  background-color: #4f9c82;
 }
 footer {
   text-align:center;

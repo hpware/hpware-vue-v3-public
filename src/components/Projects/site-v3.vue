@@ -3,7 +3,7 @@
 </script>
 
 <template>
-<h3>S</h3>
+<h3>Site V3</h3>
 </template>
 
 <style scoped>
