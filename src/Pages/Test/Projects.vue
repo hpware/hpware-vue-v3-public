@@ -2,8 +2,13 @@
   <h2>Projects</h2>
   <section id="current">
     <h3>Current Projects</h3>
-    <p>Site-V3 網站<br><a href="/Projects/site-v3">關於</a>&nbsp;<a href="https://github.com/hpware/hpware-site-v3">Repo</a>&nbsp;<a href="https://yuanh.xyz">網站</a></p>
-    <p>lovemusic.asia 網站 (<a style="color:aquamarine" href="/No-source-code">Source Code</a>)(<a href="https://www.lovemusic.asia">網站</a>)</p>
+    <p>Site-V3 網站
+      <br>
+      <a href="/AboutThisProject?page=Site-V3">關於</a>&nbsp;
+      <a href="https://github.com/hpware/hpware-site-v3">Repo</a>&nbsp;
+      <a href="https://yuanh.xyz">網站</a></p>
+    <p>lovemusic.asia 網站<br>
+    <a href="AboutThisProject?page=lovemusicasia">關於</a></p>
     <p>AdGuard Home Block & Allow lists (<a style="color:aquamarine" href="https://github.com/hpware/adguard-block-list">Source Code</a>)(<a href="https://hpware.github.io/adguard-block-list/">網站</a>)</p>
     <p>hwtw.cc 網站 (<a style="color:aquamarine" href="/No-source-code">Source Code</a>)(<a href="https://3002.hwtw.cc">網站</a>)</p>
     <p>Linux 安裝腳本 (<a style="color:aquamarine" href="https://old.hwtw.cc/script/linux-install.txt">TXT Dump</a>)</p>

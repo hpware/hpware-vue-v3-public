@@ -11,7 +11,7 @@ import NavSpace from '@/components/NavSpace.vue'
     <p>Python: VSCode, PyCharm</p>
     <p></p>
     <p>OS: Windows 11, <del>Ubuntu 24.01</del>, MacOS, Debian 12</p>
-    <p>Self Hosted: <a href="https://git.hwtw.cc">Git 伺服器 Gitea</a>(只是很爛)
+    <p>Self Host: <a href="https://git.hwtw.cc">Git 伺服器 Gitea</a><NavSpace />
       <br class="mobilei"><a href="https://zz.yuanhau.com">檔案分享伺服器 Zipline</a><NavSpace />
       <a href="https://vd.yuanhau.com">使用者調查系統 Umami</a></p>
   </section>
