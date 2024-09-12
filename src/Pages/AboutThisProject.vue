@@ -3,6 +3,7 @@
 import SiteV3 from '@/components/Projects/site-v3.vue';
 import Lovemusicasiasite from '@/components/Projects/lovemusicasiasite.vue';
 import AdGuardBlockList from '@/components/Projects/AdGuardBlockList.vue';
+import hwtw_cc from '@/components/Projects/hwtw-cc.vue';
 // Pull URL variables and set to all lowercase
 const page_content_URL = new URLSearchParams(location.search).get("page");
 let page_content = `${page_content_URL.toLowerCase()}`;
@@ -12,13 +13,15 @@ let page_content = `${page_content_URL.toLowerCase()}`;
   <div v-if="page_content === 'lovemusicasiasite'">
     <Lovemusicasiasite />
   </div>
-  <div v-if="page_content === 'site-v3'">
+  <div v-else-if="page_content === 'site-v3'">
     <SiteV3 />
   </div>
-  <div v-if="page_content === 'adguard-block-list'">
+  <div v-else-if="page_content === 'adguard-block-list'">
     <AdGuardBlockList />
   </div>
-
+  <div v-else-if="page_content === 'hwtw-cc'">
+    <hwtw_cc />
+  </div>
   <div v-else>
     <h1>404</h1>
     <p class="text-error">網頁不存在</p>

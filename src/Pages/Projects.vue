@@ -10,24 +10,23 @@
     <p>lovemusic.asia 網站<br>
     <a href="/AboutThisProject?page=lovemusicasia">關於</a>&nbsp;
     <a href="https://lovemusic.asia">網站</a></p>
-
+<hr class="between_projects">
     <p>AdGuard Home Block & Allow lists<br>
       <a href="/AboutThisProject?page=AdGuard-Block-list">關於</a>&nbsp;
       <a href="https://github.com/hpware/AdGuard-Block-list">Repo</a>&nbsp;
       <a href="https://hpware.github.io/adguard-block-list/">English Page</a>&nbsp;
       <a href="https://hpware.github.io/adguard-block-list/README-zh">繁體中文網頁</a>
     </p>
-
+    <hr class="between_projects">
     <p>hwtw.cc 網站<br>
       <a href="/AboutThisProject?page=hwtw-cc">關於</a>&nbsp;
       <a href="https://hwtw.cc">網站</a>
     </p>
-
+    <hr class="between_projects">
     <p>Linux 安裝腳本<br>
       <a href="/AboutThisProject?page=Linux安裝指令">關於</a>&nbsp;
       <a href="https://old.hwtw.cc/script/linux-install.txt">安裝指令</a>
     </p>
-
   </section>
   <hr>
   <section id="previous">
