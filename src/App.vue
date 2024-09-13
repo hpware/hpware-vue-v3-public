@@ -1,11 +1,12 @@
 <script setup>
 import {ref} from 'vue';
 const navmobile = ref(false);
-
+import Announcement from '@/components/Announcement.vue'
 </script>
 <template>
   <nav>
     <h1>吳元皓</h1>
+    <Announcement />
     <div class="nav-mobile">
     <button @click="navmobile = !navmobile;" class="not-a-button">選單</button>
       <Transition name="fade">
