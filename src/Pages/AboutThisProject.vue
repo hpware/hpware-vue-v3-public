@@ -4,6 +4,8 @@ import SiteV3 from '@/components/Projects/site-v3.vue';
 import Lovemusicasiasite from '@/components/Projects/lovemusicasiasite.vue';
 import AdGuardBlockList from '@/components/Projects/AdGuardBlockList.vue';
 import hwtw_cc from '@/components/Projects/hwtw-cc.vue';
+// Import OopsError
+import OopsError from '@/Pages/OopsError.vue';
 // Pull URL variables and set to all lowercase
 const page_content_URL = new URLSearchParams(location.search).get("page");
 let page_content = `${page_content_URL.toLowerCase()}`;
@@ -23,9 +25,7 @@ let page_content = `${page_content_URL.toLowerCase()}`;
     <hwtw_cc />
   </div>
   <div v-else>
-    <h1>404</h1>
-    <p class="text-error">網頁不存在</p>
-    <h2>你已踏入一個所人未知的地方</h2>
+    <OopsError />
   </div>
 </template>
 

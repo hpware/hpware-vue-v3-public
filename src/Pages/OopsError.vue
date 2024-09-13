@@ -7,13 +7,7 @@
     你已經踏入到一個所人未知的地方<br>
     你可能需要幫忙一下<br>
     <a href="/">這裡</a>應該可以幫你導覽您回去正確的道路<br>
-    如果真的回不去請寄信件給我： <a href="mailto:web+errorpage@yuanhau.com">web@yuanhau.com</a>
-  </p>
-    <p lang="en">Hello, Traveler<br>
-    You have entered into a black hole.<br>
-   You might need some help<br>
-    <a href="/">This page</a> may help you go back to the right place.<br>
-    If this is my error You can email me: <a href="mailto:web+errorpage@yuanhau.com">here</a>
+    如果真的回不去請麻煩寄信件給我： <a href="mailto:web+errorpage@yuanhau.com">web@yuanhau.com</a>
   </p>
   
 </template>
