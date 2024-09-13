@@ -4,6 +4,7 @@ import NavSpace from '@/components/NavSpace.vue'
 <template>
   <nav>
     <h1>吳元皓</h1>
+    <a class=hide-nav></a>
     <RouterLink to="/">首頁</RouterLink><NavSpace/>
     <a href="/Go?l=blog">Blog</a><NavSpace/>
     <RouterLink to="/About">關於我</RouterLink><NavSpace/>
