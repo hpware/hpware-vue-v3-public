@@ -4,7 +4,7 @@
 
 <template>
   <div class="a">
-    <p><i class="bi bi-megaphone-fill"></i>&nbsp;此網站正被積極開發中！</p>
+    <p><i class="bi bi-megaphone-fill"></i>&nbsp;關於我現在有更多資訊！</p>
   </div>
 </template>
 
