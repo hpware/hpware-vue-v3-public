@@ -4,7 +4,7 @@
 
 <template>
   <div class="a">
-    <p><i class="bi bi-megaphone-fill"></i> 網站在被積極的開發！</p>
+    <p><i class="bi bi-megaphone-fill"></i>&nbsp;此網站已增加 Sentry 的錯誤追蹤！</p>
   </div>
 </template>
 
