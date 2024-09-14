@@ -10,6 +10,9 @@
     <p>小時候是我就喜歡用電腦，但我當時一點程式都不會寫。<br>
       我剛開始想要並使用自己的Wordpress的部落格<a href="https://hwweb.i234.me/wordpress/">https://hwweb.i234.me/wordpress</a>，
       <br>但Synology 不讓我把Wordpress放在 Website Root 裡面，所以我決定要改預設的檔案來讓使用者到部落格。
+      <br>在Github上發現在我的舊帳號上有一個備份<a href="https://github.com/thehwtw/wncx">github.com/thehwtw/wncx</a>
+      <br>當時的我沒有放入< a > 的標籤，所以不是 HyperLink。
+      <br>我在這一年內
     </p>
   </section>
   <br>
