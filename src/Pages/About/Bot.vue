@@ -7,9 +7,9 @@ import GitHubBot1 from '@/components/Bots-Pages/GitHub-Bot1.vue';
 </script>
 
 <template>
-<div v-if="page_content === 'github-bot1'">
-  <GitHubBot1 />
-</div>
+  <div v-if="page_content === 'github-bot1'">
+    <GitHubBot1 />
+  </div>
   <div v-else>
     <OopsError />
   </div>
