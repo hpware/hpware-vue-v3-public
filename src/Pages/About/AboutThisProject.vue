@@ -5,6 +5,7 @@ import Lovemusicasiasite from '@/components/Projects/lovemusicasiasite.vue';
 import AdGuardBlockList from '@/components/Projects/AdGuardBlockList.vue';
 import hwtw_cc from '@/components/Projects/hwtw-cc.vue';
 import LinuxInstallScript from '@/components/Projects/Linux安裝指令.vue';
+import testconnectcenter from '@/components/Projects/testconnectcenter.vue';
 // Import OopsError + CSS
 import OopsError from '@/Pages/OopsError.vue';
 // Pull URL variables and set to all lowercase
@@ -26,6 +27,9 @@ let page_content = `${page_content_URL.toLowerCase()}`;
   <div v-else-if="page_content === 'hwtw-cc'">
     <hwtw_cc />
   </div>
+    <div v-else-if="page_content === 'testconnectcenter'">
+      <testconnectcenter />
+    </div>
     <div v-else-if="page_content === 'linux安裝指令' ">
       <LinuxInstallScript />
     </div>
@@ -37,10 +41,6 @@ let page_content = `${page_content_URL.toLowerCase()}`;
 
 <style scoped>
 div.aboutthisproject {
-  p.text-error {
-    font-size: 1.5em;
-    margin-bottom: 0;
-  }
   body {
     font-size: 1.0em;
   }
