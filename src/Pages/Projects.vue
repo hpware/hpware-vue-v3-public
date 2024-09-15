@@ -1,5 +1,5 @@
 <template>
-  <h2>Projects</h2>
+  <h2 class="pagetitle">Projects</h2>
   <section id="current">
     <h3>Current Projects</h3>
     <p>Site-V3 網站<br>
@@ -24,6 +24,11 @@
     </p>
     <hr class="between_projects">
     <p>Linux 安裝腳本<br>
+      <a href="/About/Bot?page=github-bot1">關於</a>&nbsp;&nbsp;
+      <a href="https://github.com/hpware-bot1/">GitHub Bot (遭移除)</a>
+    </p>
+    <hr class="between_projects">
+    <p>Linux 安裝腳本<br>
       <a href="/About/AboutThisProject?page=Linux安裝指令">關於</a>&nbsp;
       <a href="https://old.hwtw.cc/script/linux-install.txt">安裝指令</a>
     </p>
@@ -36,8 +41,11 @@
     <p>testconnectcenter (<a style="color:aquamarine" href="https://github.com/hpware/testconnectcenter">Source Code</a>) (<a href="https://testconnectcenter.azurewebsites.net">網站</a>)</p>
 
     <p>Site-V2 網站 (<a style="color:aquamarine" href="https://github.com/hpware/site-v2">Source Code</a>)(<a href="https://hpware.hwtw.cc">網站</a>)</p>
-
-    <p>Site-V1 (<a style="color:aquamarine" href="https://github.com/hpware/site-v1">Source Code</a>)(<a href="https://3002.hwtw.cc">網站</a>)</p>
+    <hr class="between_projects">
+    <p>Site-V1<br>
+      <a href="https://github.com/hpware/old-site">Repo</a>&nbsp;
+      <a href="https://3002.hwtw.cc>">網站</a>
+    </p>
 
   </section>
 </template>
@@ -46,5 +54,10 @@
 <style scoped>
 hr.between_projects {
   width: 30%;
+  margin-bottom: 0;
+}
+p {
+  margin-top: 0.4em;
+  margin-bottom: 0;
 }
 </style>
