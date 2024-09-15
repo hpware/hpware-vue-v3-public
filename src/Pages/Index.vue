@@ -2,23 +2,23 @@
 import NavSpace from '@/components/NavSpace.vue'
 </script>
 <template>
-  <img alt="hpware" class="logo" src="https://storage.hpware.hwtw.cc/img/index-pfp.png" />
+  <img alt="hpware" class="logo" src="https://storage.hpware.hwtw.cc/img/index-pfp.png" draggable="false"/>
   <span>@hpware | @yh_.5_26 | @hwtw</span>
   <hr>
-  <section id="mytools">
+  <section id="me">
     <h3>使用的工具</h3>
     <p>網頁: VSCode, Webstorm, Vim </p>
     <p>Python: VSCode, PyCharm</p>
     <p></p>
     <p>OS: Windows 11, <del>Ubuntu 24.01</del>, MacOS, Debian 12</p>
-    <p>Self Host: <a href="https://git.hwtw.cc">Git 伺服器 Gitea</a><NavSpace />
+    <p>Self Host:<NavSpace /><a href="https://git.hwtw.cc">Git 伺服器 Gitea</a>&nbsp;
       <br class="mobilei"><a href="https://zz.yuanhau.com">檔案分享伺服器 Zipline</a><NavSpace />
       <a href="https://vd.yuanhau.com">使用者調查系統 Umami</a></p>
   </section>
   <hr>
   <section id="learn">
     <h3>我想學的</h3>
-    <span><del>C++(不想學)</del></span> <br class="mobilei">
+    <span><del>Scratch(學了沒有意義)</del></span> <br class="mobilei">
     <span>VueJS</span> <br class="mobilei">
     <span>Python</span> <br class="mobilei">
     <span>mySQL</span> <br class="mobilei">
@@ -46,7 +46,7 @@ import NavSpace from '@/components/NavSpace.vue'
 .logo:hover {
   filter: drop-shadow(0 0 2em #444444aa);
 }
-.gitstats {
+section.gitstats {
   img{
     transition: filter 300ms;
   }
@@ -59,7 +59,7 @@ br.mobilei {
 }
 @media (max-width: 1274px) {
   br.mobilei{
-    display: block;
+    display: none;
   }
 }
 </style>
