@@ -18,7 +18,6 @@ import NavSpace from '@/components/NavSpace.vue'
   <hr>
   <section id="learn">
     <h3>我想學的</h3>
-    <span><del>Scratch(學了沒有意義)</del></span> <br class="mobilei">
     <span>VueJS</span> <br class="mobilei">
     <span>Python</span> <br class="mobilei">
     <span>mySQL</span> <br class="mobilei">
