@@ -1,9 +1,9 @@
-<script setup lang="ts">
+<script setup>
 </script>
 <template>
-  <h3>關於我</h3>
+  <h2 class="pagetitle">關於我</h2>
   <section id="aboutme">
-    <h4>自我介紹</h4>
+    <h3>自我介紹</h3>
     <p>我是一個學生，準備在臺灣就讀有關資訊工程的五專。</p>
     <p>熟悉 HTML, CSS , Vercel 與 Git(Hub) </p>
     <p>我喜歡把 Prod 當測試環境。</p>
@@ -19,15 +19,28 @@
     </p>
     <p>
       我也在國中一年級時開始學習Python，這個也是我想學的語言，但我教學影片只看但10％的地方就放棄了。
-      <br>我也之後大多數都忘記了，if else 每次都要查一下，因為我比較習慣用JavaScript 的方式 if {}。
+      <br>我也之後大多數都忘記了，連 if else 每次都要查一下，因為我比較習慣用JavaScript 的方式 if {} else if {} else {}。
     </p>
   </section>
   <br>
   <hr>
-  <section id="certifications">
-    <h4>檢定通過</h4>
-    <p style="font-size: 1.5em; padding-bottom: 0;">GEPT</p>
-    <span>初級</span><br>
-    <span>中級聽讀</span>
+  <section id="certifications" class="certifications">
+    <h3>檢定通過</h3>
+    <p>GEPT</p>
+    <span>初級 (2021)</span><br>
+    <span>中級聽讀 (2022)</span>
+    <p>TOEFL</p>
+    <span>Junior Standard Test (2022)</span>
   </section>
 </template>
+<style scoped>
+section.certifications {
+  h4 {
+    margin-bottom:0;
+  }
+p {
+  font-size: 1.3em;
+  padding-bottom: 0;
+}
+}
+</style>
