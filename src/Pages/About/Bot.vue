@@ -16,5 +16,4 @@ import GitHubBot1 from '@/components/Bots-Pages/GitHub-Bot1.vue';
 </template>
 
 <style scoped>
-
 </style>
