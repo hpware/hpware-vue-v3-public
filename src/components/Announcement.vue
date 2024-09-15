@@ -4,7 +4,7 @@
 
 <template>
   <div class="a">
-    <p><i class="bi bi-megaphone-fill"></i>&nbsp;<a href=“https://go64.cc/u9z4IW”>新 Thread !</a></p>
+    <p><i class="bi bi-megaphone-fill"></i>&nbsp;<a href=https://go64.cc/u9z4IW>新 Thread！</a></p>
   </div>
 </template>
 
