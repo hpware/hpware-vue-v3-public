@@ -4,7 +4,7 @@
 
 <template>
   <div class="a">
-    <p><i class="bi bi-megaphone-fill"></i>&nbsp;關於我現在有更多資訊！</p>
+    <p><i class="bi bi-megaphone-fill"></i>&nbsp;yuanh.xyz/go 現在終於可以正常使用！</p>
   </div>
 </template>
 
