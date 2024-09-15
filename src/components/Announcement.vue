@@ -4,6 +4,7 @@
 
 <template>
   <div class="a">
+    <p><i class="bi bi-megaphone-fill"></i>&nbsp;公告系統正常！</p>
   </div>
 </template>
 
