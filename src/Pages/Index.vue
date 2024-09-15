@@ -28,8 +28,10 @@ import NavSpace from '@/components/NavSpace.vue'
   <hr>
   <section id="stats" class="gitstats">
     <h3>GitHub 資料</h3>
-    <img src="https://raw.githubusercontent.com/hpware/gitstats/master/generated/overview.svg#gh-dark-mode-only" draggable="false"/>
-    <img src="https://raw.githubusercontent.com/hpware/gitstats/master/generated/languages.svg#gh-dark-mode-only" draggable="false"/>
+    <img src="https://raw.githubusercontent.com/hpware/gitstats/master/generated/overview.svg#gh-dark-mode-only"
+         alt="GitHub Stats Overview that displays what I have done in GitHub" draggable="false"/>
+    <img src="https://raw.githubusercontent.com/hpware/gitstats/master/generated/languages.svg#gh-dark-mode-only"
+         alt="GitHub Stats Languages that displays what languages I have used on GitHub" draggable="false"/>
 
   </section>
 </template>
