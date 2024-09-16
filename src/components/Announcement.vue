@@ -4,6 +4,7 @@
 
 <template>
   <div class="a">
+    <p><i class="bi bi-megaphone-fill"></i>&nbsp;新Thread&nbsp;<a href="https://www.threads.net/@yh_.5_26/post/C_-kTe7P3Q4">連結</a></p>
   </div>
 </template>
 
