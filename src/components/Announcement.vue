@@ -4,7 +4,7 @@
 
 <template>
   <div class="a">
-    <p><i class="bi bi-megaphone-fill"></i>&nbsp;公告系統正常！</p>
+    <p><i class="bi bi-megaphone-fill"></i>&nbsp;新服務！<a href="https://automation.yuanh.xyz/form/cloud-net-apply">申請</a></p>
   </div>
 </template>
 
