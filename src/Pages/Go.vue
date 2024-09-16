@@ -1,45 +1,50 @@
 <script setup>
 const goLink = new URLSearchParams(window.location.search).get('l');
 if (goLink === "ig") {
-  window.location.href = "https://www.instagram.com/yh_.5_26/";
+  window.location.href = "https://www.instagram.com/yh_.5_26/?ref=yuanh.xyz";
 }
 else if (goLink === "gh") {
-  window.location.href = "https://github.com/hpware";
+  window.location.href = "https://github.com/hpware?ref=yuanh.xyz";
 }
 else if (goLink === "th") {
-  window.location.href = "https://threads.net/yh_.5_26";
+  const PostURL = new URLSearchParams(window.location.search).get('post');
+  if (!PostURL) {
+    window.location.href = "https://threads.net/@yh_.5_26?ref=yuanh.xyz";
+  } else if (PostURL) {
+    window.location.href = `https://threads.net/@yh_.5_26/post/${PostURL}?ref=yuanh.xyz`;
+  }
 }
 else if (goLink === "em") {
   window.location.href = "mailto:web@yuanhau.com";
 }
 else if (goLink === "old-site") {
-  window.location.href = "https://3002.hwtw.cc"
+  window.location.href = "https://v2.yuanh.xyz?ref=yuanh.xyz"
 }
 else if (goLink === "gh-repo") {
-  window.location.href = "https://github.com/hpware/hpware-vue-v3"
+  window.location.href = "https://github.com/hpware/hpware-vue-v3?ref=yuanh.xyz"
 }
 else if (goLink === "en-site") {
-  window.location.href = "https://hwtw.cc";
+  window.location.href = "https://hwtw.cc?ref=yuanh.xyz";
 }
 else if (goLink === "analytics") {
-  window.location.href= "https://vd.yuanhau.com"
+  window.location.href= "https://vd.yuanhau.com?ref=yuanh.xyz"
 }
 else if (goLink === "blog") {
   const blogPost = new URLSearchParams(window.location.search).get('p');
   if (!blogPost) {
-    window.location.href = "https://yuanhau.com";
+    window.location.href = "https://yuanhau.com?ref=yuanh.xyz";
   } else if (blogPost) {
-    window.location.href = `https://yuanhau.com/?p=${blogPost}`;
+    window.location.href = `https://yuanhau.com/?p=${blogPost}?ref=yuanh.xyz`;
   }
 }
 else if (goLink === "git") {
   const GitRepo = new URLSearchParams(window.location.search).get('repo');
   const Username = new URLSearchParams(window.location.search).get('user');
   if (!Username) {
-    window.location.href = `https://git.hwtw.cc/howard/${GitRepo}`;
+    window.location.href = `https://git.hwtw.cc/howard/${GitRepo}?ref=yuanh.xyz`;
     } else if (Username) {
     if (repo) {
-      window.location.href = `https://git.hwtw.cc/${Username}/${GitRepo}`;
+      window.location.href = `https://git.hwtw.cc/${Username}/${GitRepo}?ref=yuanh.xyz`;
     } else {
       window.location.href = "/OopsError";
     }
@@ -53,5 +58,4 @@ else {
 </script>
 <template>
   <h1 id="redirect">Redirecting...</h1>
-
 </template>
