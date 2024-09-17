@@ -1,60 +1,57 @@
+<script setup>
+import Project from '@/components/ProjectDisplayList.vue';
+import '@/assets/main.css';
+</script>
 <template>
   <h2 class="pagetitle">Projects</h2>
   <section id="current">
     <h3>Current Projects</h3>
-    <p>Site-V3 網站<br>
-      <a href="/About/AboutThisProject?page=Site-V3">關於</a>&nbsp;
-      <a href="https://github.com/hpware/hpware-site-v3">Repo</a>&nbsp;
-      <a href="https://yuanh.xyz">網站</a></p>
-<hr class="between_projects">
-    <p>lovemusic.asia 網站<br>
-    <a href="/About/AboutThisProject?page=lovemusicasia">關於</a>&nbsp;
-    <a href="https://lovemusic.asia">網站</a></p>
-<hr class="between_projects">
-    <p>AdGuard Home Block & Allow lists<br>
-      <a href="/About/AboutThisProject?page=AdGuard-Block-list">關於</a>&nbsp;
-      <a href="https://github.com/hpware/AdGuard-Block-list">Repo</a>&nbsp;
-      <a href="https://hpware.github.io/adguard-block-list/">English Page</a>&nbsp;
-      <a href="https://hpware.github.io/adguard-block-list/README-zh">繁體中文網頁</a>
-    </p>
-    <hr class="between_projects">
-    <p>hwtw.cc 網站<br>
-      <a href="/About/AboutThisProject?page=hwtw-cc">關於</a>&nbsp;
-      <a href="https://hwtw.cc">網站</a>
-    </p>
-    <hr class="between_projects">
-    <p>Linux 安裝腳本<br>
-      <a href="/About/AboutThisProject?page=Linux安裝指令">關於</a>&nbsp;
-      <a href="https://old.hwtw.cc/script/linux-install.txt">安裝指令</a>
-    </p>
+    <Project name="Site-V3 網站"
+                        repo="https://github.com/hpware/hpware-site-v3"
+                        website="https://yuanh.xyz"
+                        about="Site-V3"
+                        between_projects="1"></Project>
+    <Project name="lovemusic.asia 網站"
+                        website="https://lovemusic.asia"
+                        about="lovemusicasia"
+                        between_projects="1"></Project>
+    <Project name="hwtw.cc 網站"
+                        website="https://hwtw.cc"
+                        about="hwtw-cc"
+                        between_projects="1"></Project>
+    <Project name="AdGuard Home Block & Allow lists"
+                        repo="https://github.com/hpware/AdGuard-Block-list"
+                        website="https://hpware.github.io/adguard-block-list/README"
+                        MoreText="<a href='https://hpware.github.io/adguard-block-list/README-zh'>繁體中文網頁</a>"
+                        about="AdGuard-Block-list"
+                        between_projects="1"></Project>
+    <Project name="Linux 安裝腳本"
+                        MoreText=" <a href='https://old.hwtw.cc/script/linux-install.txt'>安裝指令</a>"
+                        about="Linux安裝指令"
+                        between_projects="0"></Project>
   </section>
   <hr>
   <section id="previous">
     <h3>Previous Projects</h3>
-    <p>舊 hwtw.cc 網站<br>
-      <a href="https://old.hwtw.cc">網站</a>
-    </p>
-    <hr class="between_projects">
-    <p>testconnectcenter<br>
-      <a href="/About/AboutThisProject?page=testconnectcenter">關於</a>&nbsp;
-      <a href="https://github.com/hpware/testconnectcenter">Repo</a>&nbsp;
-      <a href="https://testconnectcenter.azurewebsites.net">網站</a>
-    </p>
-    <hr class="between_projects">
-    <p>Site-V2 網站<br>
-      <a href="https://github.com/hpware/old-site">Repo</a>&nbsp;
-      <a href="https://3002.hwtw.cc>">網站</a>
-    </p>
-    <hr class="between_projects">
-    <p>Site-V1<br>
-      <a href="https://github.com/hpware/old-site">Repo</a>&nbsp;
-      <a href="https://3002.hwtw.cc>">網站</a>
-    </p>
+    <Project name="舊 hwtw.cc 網站"
+                        website="https://old.hwtw.cc"
+                        between_projects="1"></Project>
+    <Project name="TestConnectCenter"
+                        about="testconnectcenter"
+                        repo="https://github.com/hpware/testconnectcenter"
+                        website="https://testconnectcenter.azurewebsites.net"
+                        between_projects="1"></Project>
+    <Project name="Site-V2"
+                        repo="https://github.com/hpware/old-site"
+                        website="https://3002.hwtw.cc"
+                        between_projects="1"></Project>
+    <Project name="Site-V1"
+                        repo="https://github.com/hpware/old-site"
+                        website="https://3002.hwtw.cc"
+                        between_projects="0"></Project>
 
   </section>
 </template>
-<script setup>
-</script>
 <style scoped>
 hr.between_projects {
   width: 30%;
