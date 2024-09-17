@@ -35,7 +35,7 @@ import Announcement from '@/components/Announcement.vue'
     <a  href="/Go?l=th" target="_blank" rel="noopener">Threads(脆)</a>&nbsp;
     <a href="/Go?l=old-site" target="_blank" rel="noopener">舊網站</a>&nbsp;
     <a href="/Go?l=em" target="_blank" rel="noopener">信箱</a>&nbsp;
-    <a href="/InfectedSites">已中毒的網站</a>
+    <a href="/Other">其他</a>
     <p>&copy; {{ new Date().getFullYear() }} 吳元皓</p>
   </footer>
 </template>
