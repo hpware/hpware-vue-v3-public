@@ -1,4 +1,5 @@
 <script setup>
+
 </script>
 
 <template>
@@ -15,8 +16,5 @@
 }
 a {
   color: yellow;
-}
-a:hover {
-  color: rgba(255, 255, 0, 0.71);
 }
 </style>
