@@ -34,8 +34,8 @@ import Announcement from '@/components/Announcement.vue'
     <a href="/Go?l=ig" target="_blank" rel="noopener">Instagram</a>&nbsp;
     <a  href="/Go?l=th" target="_blank" rel="noopener">Threads(脆)</a>&nbsp;
     <a href="/Go?l=old-site" target="_blank" rel="noopener">舊網站</a>&nbsp;
-    <a href="/Go?l=en-site" target="_blank" rel="noopener">英文網站</a>&nbsp;
-    <a href="/Go?l=em" target="_blank" rel="noopener">信箱</a><br>
+    <a href="/Go?l=em" target="_blank" rel="noopener">信箱</a>&nbsp;
+    <a href="/InfectedSites">已中毒的網站</a>
     <p>&copy; {{ new Date().getFullYear() }} 吳元皓</p>
   </footer>
 </template>
@@ -44,6 +44,10 @@ import Announcement from '@/components/Announcement.vue'
 footer {
   a{
     color:aqua
+  }
+  p {
+    font-size: 0.8em;
+    margin-top: 0;
   }
 }
 div.nav-mobile {
