@@ -1,41 +1,35 @@
-<script setup type="module">
-// Import Web pages.
-import SiteV3 from '@/components/Projects/site-v3.vue';
-import Lovemusicasiasite from '@/components/Projects/lovemusicasiasite.vue';
-import AdGuardBlockList from '@/components/Projects/AdGuardBlockList.vue';
-import hwtw_cc from '@/components/Projects/hwtw-cc.vue';
-import LinuxInstallScript from '@/components/Projects/Linux安裝指令.vue';
-import testconnectcenter from '@/components/Projects/testconnectcenter.vue';
-// Import OopsError + CSS
-import OopsError from '@/Pages/OopsError.vue';
+<script setup>
 // Pull URL variables and set to all lowercase
 const page_content_URL = new URLSearchParams(location.search).get("page");
 let page_content = `${page_content_URL.toLowerCase()}`;
+// Import Error page and Vue Ref & defineAsyncComponent
+import OopsError from '@/Pages/OopsError.vue';
+import { ref, defineAsyncComponent } from 'vue';
+// Import Web pages.
+const pages = {
+  'lovemusicasia': () => import('@/components/Projects/lovemusicasiasite.vue'),
+  'site-v3': () => import('@/components/Projects/site-v3.vue'),
+  'adguard-block-list': () => import('@/components/Projects/AdGuardBlockList.vue'),
+  'hwtw-cc': () => import('@/components/Projects/hwtw-cc.vue'),
+  'testconnectcenter': () => import('@/components/Projects/testconnectcenter.vue'),
+  'linux安裝指令': () => import('@/components/Projects/Linux安裝指令.vue')
+};
+const component = ref(null);
+if (pages[page_content]) {
+  component.value = defineAsyncComponent(pages[page_content]);
+  var displaytitle = ref(true);
+} else {
+  component.value = OopsError;
+  var displaytitle = ref(false);
+
+}
+
 </script>
 
 <template>
-  <div class="aboutthisproject">
-  <div v-if="page_content === 'lovemusicasia'">
-    <Lovemusicasiasite />
-  </div>
-  <div v-else-if="page_content === 'site-v3'">
-    <SiteV3 />
-  </div>
-  <div v-else-if="page_content === 'adguard-block-list'">
-    <AdGuardBlockList />
-  </div>
-  <div v-else-if="page_content === 'hwtw-cc'">
-    <hwtw_cc />
-  </div>
-    <div v-else-if="page_content === 'testconnectcenter'">
-      <testconnectcenter />
-    </div>
-    <div v-else-if="page_content === 'linux安裝指令' ">
-      <LinuxInstallScript />
-    </div>
-  <div v-else>
-    <OopsError />
-  </div>
+  <h2 v-if="displaytitle = true">關於這個專案</h2>
+  <div class="aboutthisproject" id="project">
+    <component :is="component"></component>
   </div>
 </template>
 
