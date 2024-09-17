@@ -1,0 +1,44 @@
+<script setup>
+// Pull URL variables and set to all lowercase
+const page_content_URL = new URLSearchParams(location.search).get("page");
+let page_content = page_content_URL ? page_content_URL.toLowerCase() : '';
+
+// Import Error page and Vue Ref & defineAsyncComponent
+import OopsError from '@/Pages/OopsError.vue';
+import { ref, defineAsyncComponent } from 'vue';
+
+// Import Web pages.
+const url = import.meta.url;
+const path = new URL(url).pathname;
+const listpages = path.match(/\/components\/ImageBoards\/(.*)\.vue$/)[1].split(',');
+
+const pages = {};
+listpages.forEach(page => {
+  pages[page] = () => import(`@/components/ImageBoards/${page}.vue`);
+});
+
+const component = ref(null);
+const displaytitle = ref(false);
+
+if (pages[page_content]) {
+  component.value = defineAsyncComponent(pages[page_content]);
+  displaytitle.value = true;
+} else {
+  component.value = OopsError;
+}
+</script>
+
+<template>
+  <h3 v-if="displaytitle">關於這個專案</h3>
+  <div class="aboutthisproject" id="project">
+    <component :is="component"></component>
+  </div>
+</template>
+
+<style scoped>
+div.aboutthisproject {
+  body {
+    font-size: 1.0em;
+  }
+}
+</style>
