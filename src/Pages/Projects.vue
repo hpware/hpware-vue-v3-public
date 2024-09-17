@@ -1,12 +1,13 @@
 <script setup>
-import Project from '@/components/ProjectDisplayList.vue';
+import Project from '@/components/ProjectDisplayTemplate.vue';
 import '@/assets/main.css';
 </script>
 <template>
-  <h2 class="pagetitle">Projects</h2>
+  <h2 class="pagetitle">所有專案</h2>
   <section id="current">
-    <h3>Current Projects</h3>
+    <h3>現在開發、更新中的專案</h3>
     <Project name="Site-V3 網站"
+                        ai="help"
                         repo="https://github.com/hpware/hpware-site-v3"
                         website="https://yuanh.xyz"
                         about="Site-V3"
@@ -32,11 +33,13 @@ import '@/assets/main.css';
   </section>
   <hr>
   <section id="previous">
-    <h3>Previous Projects</h3>
+    <h3>舊或以取代的專案</h3>
     <Project name="舊 hwtw.cc 網站"
+                        ai="help"
                         website="https://old.hwtw.cc"
                         between_projects="1"></Project>
     <Project name="TestConnectCenter"
+                        ai="make"
                         about="testconnectcenter"
                         repo="https://github.com/hpware/testconnectcenter"
                         website="https://testconnectcenter.azurewebsites.net"
@@ -45,7 +48,7 @@ import '@/assets/main.css';
                         repo="https://github.com/hpware/old-site"
                         website="https://3002.hwtw.cc"
                         between_projects="1"></Project>
-    <Project name="Site-V1"
+    <Project name="Site-V1 (用別人做的)"
                         repo="https://github.com/hpware/old-site"
                         website="https://3002.hwtw.cc"
                         between_projects="0"></Project>
