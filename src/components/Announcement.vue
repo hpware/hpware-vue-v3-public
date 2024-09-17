@@ -1,10 +1,9 @@
 <script setup>
-
 </script>
 
 <template>
   <div class="a">
-    <p><i class="bi bi-megaphone-fill"></i>&nbsp;新Thread！ <a href="/go?l=th&post=C__-DBfS23q">連結</a></p>
+    <p><i class="bi bi-megaphone-fill"></i>&nbsp;gh.yuanh.xyz 已修復成未中毒網頁 <a href="/InfectedSites#gh.yuanh.xyz">更多資訊</a></p>
   </div>
 </template>
 
