@@ -4,7 +4,7 @@
 
 <template>
   <div class="a">
-    <p><i class="bi bi-megaphone-fill"></i>&nbsp;gh.yuanh.xyz 已修復成未中毒網頁 <a href="/InfectedSites#gh.yuanh.xyz">更多資訊</a></p>
+    <p><i class="bi bi-megaphone-fill"></i>&nbsp;Oracle, it’s time to free JavaScript. <a href="https://javascript.tm">Sign this proposal</a>!</p>
   </div>
 </template>
 
