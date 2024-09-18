@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import NavSpace from '@/Other/NavSpace.vue'
+import NavSpace from '@/components/Other/NavSpace.vue'
 </script>
 <template>
   <img alt="hpware" class="logo" src="https://storage.hpware.hwtw.cc/img/index-pfp.png" draggable="false"/>

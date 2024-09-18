@@ -1,6 +1,7 @@
 <script setup>
 // Default
 import { ref } from 'vue';
+import NavSpace from '@/components/Other/NavSpace.vue';
 // Login Function
 const login = ref('no');
 const pwd = ref('');
@@ -18,6 +19,7 @@ const AnnouncementsTransition = ref(false);
 const toggleAnnouncements = () => {
   AnnouncementsTransition.value = !AnnouncementsTransition.value;
 }
+//
 </script>
 
 <template>
