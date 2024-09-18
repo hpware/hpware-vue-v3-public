@@ -35,7 +35,7 @@ const props = defineProps({
 </script>
 <template>
   <p>{{name}}&nbsp;<br>
-    <span v-if="props.ai === 'make'" class="small-ai-text">(AI 製作)</span><span v-if="props.ai === 'help'" class="small-ai-text">(AI 有幫助)</span>
+    <span v-if="props.ai === 'make'" class="small-ai-text">(AI 製作 Key feature)</span><span v-if="props.ai === 'help'" class="small-ai-text">(AI 有幫助完整程式)</span>
     <br v-if="props.ai">
     <a v-if="props.about" :href="`/About/AboutThisProject?page=${props.about}`">關於</a>
     <span v-if="props.about && props.repo">&nbsp;</span>
