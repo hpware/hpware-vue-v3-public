@@ -1,5 +1,5 @@
 <script setup>
-import Project from '@/components/ProjectDisplayTemplate.vue';
+import Project from '@/components/Templates/ProjectDisplayTemplate.vue';
 import '@/assets/main.css';
 </script>
 <template>
@@ -56,10 +56,6 @@ import '@/assets/main.css';
   </section>
 </template>
 <style scoped>
-hr.between_projects {
-  width: 30%;
-  margin-bottom: 0;
-}
 p {
   margin-top: 0.4em;
   margin-bottom: 0;

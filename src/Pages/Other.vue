@@ -1,6 +1,4 @@
 <script setup>
-
-import NavSpace from "@/components/NavSpace.vue";
 </script>
 
 <template>

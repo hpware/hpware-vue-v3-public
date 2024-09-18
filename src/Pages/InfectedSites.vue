@@ -1,5 +1,5 @@
 <script setup>
-import ist from '@/components/InfectedSitesTemplate.vue';
+import ist from '@/components/Templates/InfectedSitesTemplate.vue';
 </script>
 
 <template>
