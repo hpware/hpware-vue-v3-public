@@ -4,7 +4,7 @@
 
 <template>
   <div class="a">
-    <p><i class="bi bi-megaphone-fill"></i>&nbsp;Tell Oracle to free Javascript <a href="https://javascript.tm">Sign this petition</a></p>
+    <p><i class="bi bi-megaphone-fill"></i>&nbsp;<a href="https://javascript.tm/">Tell Oracle to free Javascript</a></p>
   </div>
 </template>
 <style scoped>
