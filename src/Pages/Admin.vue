@@ -52,6 +52,9 @@ const toggleAnnouncements = () => {
 </template>
 
 <style scoped>
+  button {
+    color: black;
+  }
 input, textarea {
   border-radius: 5px;
   padding: 10px;
