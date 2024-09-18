@@ -19,13 +19,14 @@ routes.push(
         redirect: '/你在找什麼',
     },
     {
-    path: '/:pathMatch(.*)*',
-    name: 'NotFound',
-    component: () => import('@/Pages/OopsError.vue'),
-    meta: {
-        title: 'Oops! Page not found',
+        path: '/:pathMatch(.*)*',
+        name: 'NotFound',
+        component: () => import('@/Pages/OopsError.vue'),
+        meta: {
+            title: 'Oops! Page not found',
+        }
     },
-});
+);
 
 const router = createRouter({
     history: createWebHistory(),
