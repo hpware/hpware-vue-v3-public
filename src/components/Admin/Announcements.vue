@@ -18,6 +18,9 @@
 </template>
 
 <style scoped>
+  button {
+    color:white;
+  }
 input, textarea {
   border-radius: 5px;
   padding: 10px;
