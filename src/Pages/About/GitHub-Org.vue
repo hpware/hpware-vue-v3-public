@@ -7,7 +7,7 @@ import OopsError from '@/Pages/OopsError.vue';
 import { ref, defineAsyncComponent } from 'vue';
 // Import Web pages.
 const pages = {
-  'lmsite-tw': () => import('@/components/GitHub-Org/lmsite-tw.vue'),
+  'lmsite-tw': () => import('@/components/GitHub-Orgs/lmsite-tw.vue'),
 };
 const component = ref(null);
 if (pages[page_content]) {
