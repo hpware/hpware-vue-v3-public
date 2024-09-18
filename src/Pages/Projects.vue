@@ -8,7 +8,7 @@ import '@/assets/main.css';
     <h3>現在開發、更新中的專案</h3>
     <Project name="Site-V3 網站"
                         ai="help"
-                        repo="https://github.com/hpware/hpware-site-v3"
+                        repo="https://github.com/hpware/hpware-vue-v3"
                         website="https://yuanh.xyz"
                         about="Site-V3"
                         between_projects="1"></Project>
