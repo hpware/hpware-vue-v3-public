@@ -42,5 +42,7 @@ Disallow: /.git/
 Disallow: /你在找什麼
 Disallow: /No-Source-Code
 Disallow: /Go
+Disallow: /Beta/
+Disallow: /Admin/
 
 Sitemap: https://yuanh.xyz/sitemap.xml
