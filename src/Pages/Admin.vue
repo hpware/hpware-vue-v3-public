@@ -40,7 +40,7 @@ const toggleAnnouncements = () => {
       <h3>Admin Login Page</h3>
       <p>You are trying to access a password protected area.</p><br>
       <form @submit="checkUser">
-				<label for="username">User<label>
+				<label for="username">User</label><br>
 				<input type="user" v-model="username" required>
         <label for="password">Password</label><br>
         <input type="password" v-model="pwd" required>
