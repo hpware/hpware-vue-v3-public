@@ -14,7 +14,8 @@ import Announcement from '@/components/Announcement.vue'
         <RouterLink to="/">首頁</RouterLink><br>
         <RouterLink to="/Go?l=blog">Blog</RouterLink><br>
         <RouterLink to="/About">關於我</RouterLink><br>
-        <RouterLink to="/Projects">專案</RouterLink>
+        <RouterLink to="/Projects">專案</RouterLink><br>
+        <RouterLink to="/Other">其他</RouterLink>
       </div>
     </Transition>
     </div>
@@ -22,7 +23,8 @@ import Announcement from '@/components/Announcement.vue'
     <RouterLink to="/">首頁</RouterLink>&nbsp;
     <RouterLink to="/Go?l=blog">Blog</RouterLink>&nbsp;
     <RouterLink to="/About">關於我</RouterLink>&nbsp;
-    <RouterLink to="/Projects">專案</RouterLink>
+    <RouterLink to="/Projects">專案</RouterLink>&nbsp;
+      <RouterLink to="/Other">其他</RouterLink>
     </div>
   </nav>
   <main>
@@ -30,12 +32,10 @@ import Announcement from '@/components/Announcement.vue'
   </main>
   <footer>
     <br><br>
-    <a href="/Go?l=gh" target="_blank" rel="noopener">GitHub</a>&nbsp;
-    <a href="/Go?l=ig" target="_blank" rel="noopener">Instagram</a>&nbsp;
-    <a  href="/Go?l=th" target="_blank" rel="noopener">Threads(脆)</a>&nbsp;
-    <a href="/Go?l=old-site" target="_blank" rel="noopener">舊網站</a>&nbsp;
-    <a href="/Go?l=em" target="_blank" rel="noopener">信箱</a>&nbsp;
-    <a href="/Other">其他</a>
+    <a href="/Go?l=gh" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>&nbsp;
+    <a href="/Go?l=ig" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>&nbsp;
+    <a  href="/Go?l=th" target="_blank" rel="noopener"><i class="bi bi-threads"></i></a>&nbsp;
+    <a href="/Go?l=em" target="_blank" rel="noopener"><i class="bi bi-envelope"></i></a>&nbsp;
     <p>&copy; {{ new Date().getFullYear() }} 吳元皓</p>
   </footer>
 </template>
