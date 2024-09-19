@@ -19,7 +19,7 @@
 
 <style scoped>
   button {
-    color:white;
+    color:black;
   }
 input, textarea {
   border-radius: 5px;

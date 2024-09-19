@@ -4,12 +4,12 @@ import { ref } from 'vue';
 import NavSpace from '@/components/Other/NavSpace.vue';
 // Login Function
 const login = ref('no');
-// const username = ref('');
-// const ENVusername = import.meta.env.VITE_ADMINUSERNAME;
+const username = ref('');
+const ENVusername = import.meta.env.VITE_ADMINUSERNAME;
 const pwd = ref('');
 const ENVpwd = import.meta.env.VITE_ADMINPWD;
 const checkUser = () => {
-  if (pwd.value === ENVpwd) {
+  if (pwd.value === ENVpwd && username.value === ENVusername) {
     login.value = 'yes';
   } else {
     login.value = 'failed';
@@ -28,7 +28,6 @@ const toggleAnnouncements = () => {
   <div class="admin-page">
     <div v-if="login === 'yes'">
       <h3>管理員系統 (Beta)</h3>
-      <p>Panels:</p><br>
       <button @click="toggleAnnouncements();">更改公告</button>
       <Transition name="fade">
         <div v-if="AnnouncementsTransition">
@@ -40,8 +39,8 @@ const toggleAnnouncements = () => {
       <h3>管理員登入系統 (Beta)</h3>
       <p>這個網頁必須登入才可使用</p><br>
       <form @submit="checkUser">
-				<!--<label for="username">使用者</label><br>
-				<input type="user" v-model="username"><br>-->
+				<label for="username">使用者</label><br>
+				<input type="user" v-model="username" required><br>
         <label for="password">密碼</label><br>
         <input type="password" v-model="pwd" required>
         <br>
