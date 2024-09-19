@@ -20,15 +20,19 @@
       <br>當時的我沒有放入< a > 的標籤，所以不是 HyperLink，我當時也沒想太多就繼續使用著。
       <br>但我在這一年內增加了許多HTML & CSS的知識，讓我更有信心可以在學VueJS。
     </p>
-    <h4>Python</h4>
+    <h4><del>Python</del></h4>
     <p>
       我也在國中一年級時開始學習Python，這個也是我想學的語言，但我教學影片只看但10％的地方就放棄了。
       <br>我也之後大多數都忘記了，連 if else 每次都要查一下，因為我比較習慣用 JavaScript 的方式 if {} else if {} else {}。
     </p>
-<!--IT
-	<p>我在2019年時，發現2018年買的NAS可以放虛擬機器，剛開始只是跑 Windows 7 而已，
-		但一段時間後我發現Linux，我也開始學一點Debain Cli (Ubuntu)
-	</p>-->
+      <h4>IT</h4>
+    <p>我在2019年時，發現2018年買的NAS可以放虛擬機器，剛開始只是跑 Windows 7 而已，<br>
+		但一段時間後我發現Linux，我也開始學一點Debain Cli (Ubuntu)來安裝服務。<br>
+      主要學習的是 Nginx， Nginx 是一個比較 Flexible 的 Web Server，<br>
+      最近也開始學一點 PHP 主要為簡單的<a href="https://github.com/hpware/php-plugins">插件</a><br>
+      也終於學會如何安裝 PHP 與 Nginx，但我還是不會用 Composer。<br>
+      我也對 Windows Server IIS 也有一點經驗，主要的原因是我在 Windows Server 2022 IIS 10.0 上讓我的爛網站跑起來，但最後還是跑回 Vercel 了。
+	  </p>
   </section>
   <br>
   <hr>
