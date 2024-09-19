@@ -4,10 +4,12 @@ import { ref } from 'vue';
 import NavSpace from '@/components/Other/NavSpace.vue';
 // Login Function
 const login = ref('no');
+const username = ref('');
+const ENVusername = import.meta.env.VITE_ADMINUSERNAME;
 const pwd = ref('');
 const ENVpwd = import.meta.env.VITE_ADMINPWD;
-const checkPassword = () => {
-  if (pwd.value === ENVpwd) {
+const checkUser = () => {
+  if (pwd.value === ENVpwd && username === ENVusername) {
     login.value = 'yes';
   } else {
     login.value = 'failed';
@@ -37,7 +39,9 @@ const toggleAnnouncements = () => {
     <div v-if="login === 'no'">
       <h3>Admin Login Page</h3>
       <p>You are trying to access a password protected area.</p><br>
-      <form @submit="checkPassword">
+      <form @submit="checkUser">
+				<label for="username">User<label>
+				<input type="user" v-model="username" required>
         <label for="password">Password</label><br>
         <input type="password" v-model="pwd" required>
         <br>
