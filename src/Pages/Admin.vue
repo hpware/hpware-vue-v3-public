@@ -27,9 +27,9 @@ const toggleAnnouncements = () => {
 <template>
   <div class="admin-page">
     <div v-if="login === 'yes'">
-      <h3>Admin Page</h3>
+      <h3>管理員系統 (Beta)</h3>
       <p>Panels:</p><br>
-      <button @click="toggleAnnouncements();">公告更改</button>
+      <button @click="toggleAnnouncements();">更改公告</button>
       <Transition name="fade">
         <div v-if="AnnouncementsTransition">
           <Announcements />
@@ -37,20 +37,20 @@ const toggleAnnouncements = () => {
       </Transition>
     </div>
     <div v-if="login === 'no'">
-      <h3>Admin Login Page</h3>
-      <p>You are trying to access a password protected area.</p><br>
+      <h3>管理員登入系統 (Beta)</h3>
+      <p>這個網頁必須登入才可使用</p><br>
       <form @submit="checkUser">
-				<!--<label for="username">User</label><br>
+				<!--<label for="username">使用者</label><br>
 				<input type="user" v-model="username"><br>-->
-        <label for="password">Password</label><br>
+        <label for="password">密碼</label><br>
         <input type="password" v-model="pwd" required>
         <br>
-        <button type="submit">Submit</button>
+        <button type="submit">送出</button>
       </form>
     </div>
     <div v-if="login === 'failed'">
-      <h3>Admin Page</h3>
-      <p>Failed to login</p>
+      <h3>管理員登入系統 (Beta)</h3>
+      <p>登入失敗☹️</p>
     </div>
   </div>
 </template>
