@@ -1,10 +1,9 @@
 import posthog from "posthog-js";
-const api_key = import.meta.env.POSTHOG_API;
 
 export default {
     install(app) {
         app.config.globalProperties.$posthog = posthog.init(
-            api_key,
+            'phc_dToRUD1SemEsKLy3DEQlXxWoqsr6t1y12Fdwx164IeG',
             {
                 api_host: 'https://us.i.posthog.com',
             }
