@@ -4,6 +4,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import * as Sentry from "@sentry/vue";
+import posthog from "./posthog";
 
 const app = createApp(App)
 
@@ -23,5 +24,7 @@ Sentry.init({
     replaysOnErrorSampleRate: 1.0, // If you're not already sampling the entire session, change the sample rate to 100% when sampling sessions where errors occur.
 });
 console.log("%cThis is a browser feature intended for developers. Do not copy anything here.\n", "font-size: 20px; font-weight: bold; color: red;");
-app.use(router)
+app.use(posthog);
+app.use(router);
 app.mount('#app')
+posthog.capture('my event', { property: 'value' })
