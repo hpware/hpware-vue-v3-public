@@ -4,9 +4,9 @@
 
 <template>
   <div class="a">
+    <p><i class="bi bi-megaphone-fill"></i>&nbsp;PostHog 追蹤系統已加入 😄</p>
   </div>
 </template>
-
 <style scoped>
 
 .a {
