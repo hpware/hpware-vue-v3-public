@@ -4,9 +4,9 @@
 
 <template>
   <div class="a">
-    <p><i class="bi bi-megaphone-fill"></i>&nbsp;asdasdadadasdadsadad</p>
   </div>
 </template>
+
 <style scoped>
 
 .a {
