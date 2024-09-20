@@ -27,4 +27,3 @@ console.log("%cThis is a browser feature intended for developers. Do not copy an
 app.use(posthog);
 app.use(router);
 app.mount('#app')
-posthog.capture('my event', { property: 'value' })
