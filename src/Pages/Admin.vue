@@ -56,7 +56,7 @@ const changePasswordAction = () => {
       <button @click="toggleAnnouncements();">更改公告</button>
       <NavSpace />
       <button @click="toggleBlogCreate();">新增文章</button>
-      <Transition name="fade">
+      <!--<Transition name="fade">
         <div v-if="AnnouncementsTransition">
           <Announcements />
         </div>
@@ -65,7 +65,7 @@ const changePasswordAction = () => {
         <div v-if="BlogCreateTransition">
           <CreateBlog />
         </div>
-      </Transition>
+      </Transition>-->
 
 
     </div>
