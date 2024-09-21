@@ -4,7 +4,7 @@
 
 <template>
   <div class="a">
-    <p><i class="bi bi-megaphone-fill"></i>&nbsp;PostHog 追蹤系統已加入 😄</p>
+    <p><i class="bi bi-megaphone-fill"></i>&nbsp;Heads up, Cloudflare DDoS blocking is enabled on this website!</p>
   </div>
 </template>
 <style scoped>
