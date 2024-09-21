@@ -3,13 +3,20 @@ import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import mix from 'vite-plugin-mix'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), sentryVitePlugin({
-    org: "hwtwcc",
-    project: "hwtwcc-vue"
-  })],
+  plugins: [
+      vue(),
+      sentryVitePlugin({
+        org: "hwtwcc",
+        project: "hwtwcc-vue"
+      }),
+      mix({
+        handler: '@/server.js',
+      })
+  ],
 
   resolve: {
     alias: {
