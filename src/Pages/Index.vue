@@ -2,14 +2,14 @@
 import NavSpace from '@/components/Other/NavSpace.vue'
 </script>
 <template>
-  <img alt="hpware" class="logo" src="https://storage.hpware.hwtw.cc/img/index-pfp.png" draggable="false"/>
+  <img alt="hpware" class="logo" src="https://utfs.io/f/CCLPSN5W2HD5ziRBkeSZ5pJYf32lWLvIK8uGb41xkHCUnXm7" draggable="false"/>
   <span>@hpware | @yh_.5_26 | @hwtw</span>
   <hr>
   <section id="me">
     <h3>使用的工具</h3>
     <p>網頁: VSCode, Webstorm, Vim </p>
     <p>Python: VSCode, PyCharm</p>
-    <p></p>
+    <br>
     <p>OS: Windows 11, <del>Ubuntu 24.01</del>, MacOS, Debian 12</p>
     <p>Self Host:<NavSpace /><a href="https://git.hwtw.cc">Git 伺服器 Gitea</a>&nbsp;
       <br class="mobilei"><a href="https://zz.yuanhau.com">檔案分享伺服器 Zipline</a><NavSpace />

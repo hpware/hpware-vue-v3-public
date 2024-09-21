@@ -10,7 +10,7 @@ import Announcement from '@/components/Announcement.vue'
     <div class="nav-mobile">
     <button @click="navmobile = !navmobile;" class="not-a-button">選單</button>
       <Transition name="fade">
-      <div v-if="navmobile" style="  color: rgba(191, 191, 191, 0.7);">
+      <div v-if="navmobile" style="color: rgba(191, 191, 191, 0.7);">
         <RouterLink to="/">首頁</RouterLink><br>
         <RouterLink to="/Go?l=blog">Blog</RouterLink><br>
         <RouterLink to="/About">關於我</RouterLink><br>
@@ -37,6 +37,7 @@ import Announcement from '@/components/Announcement.vue'
     <a  href="/Go?l=th" target="_blank" rel="noopener"><i class="bi bi-threads"></i></a>&nbsp;
     <a href="/Go?l=em" target="_blank" rel="noopener"><i class="bi bi-envelope"></i></a>&nbsp;
     <p>&copy; {{ new Date().getFullYear() }} 吳元皓</p>
+    <p style="font-size: 0.6em;">Made for&nbsp;<i class="bi bi-browser-chrome"></i>&nbsp;<i class="bi bi-browser-firefox"></i>&nbsp;<i class="bi bi-browser-safari"></i></p>
   </footer>
 </template>
 
