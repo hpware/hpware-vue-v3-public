@@ -19,9 +19,20 @@ const checkUser = () => {
 import Announcements from '@/components/Admin/Announcements.vue'
 const AnnouncementsTransition = ref(false);
 const toggleAnnouncements = () => {
+  if (BlogCreateTransition.value) {
+    BlogCreateTransition.value = !BlogCreateTransition.value;
+  }
   AnnouncementsTransition.value = !AnnouncementsTransition.value;
 }
-//
+// Blog Post Create
+import CreateBlog from '@/components/Admin/Blog.vue'
+const BlogCreateTransition = ref(false);
+const toggleBlogCreate = () => {
+  if (AnnouncementsTransition.value) {
+    AnnouncementsTransition.value = !AnnouncementsTransition.value;
+  }
+  BlogCreateTransition.value = !BlogCreateTransition.value;
+}
 </script>
 
 <template>
@@ -29,11 +40,20 @@ const toggleAnnouncements = () => {
     <div v-if="login === 'yes'">
       <h3>管理員系統 (Beta)</h3>
       <button @click="toggleAnnouncements();">更改公告</button>
+      <NavSpace />
+      <button @click="toggleBlogCreate();">新增文章</button>
       <Transition name="fade">
         <div v-if="AnnouncementsTransition">
           <Announcements />
         </div>
       </Transition>
+      <Transition name="fade">
+        <div v-if="BlogCreateTransition">
+          <CreateBlog />
+        </div>
+      </Transition>
+
+
     </div>
     <div v-if="login === 'no'">
       <h3>管理員登入系統 (Beta)</h3>
