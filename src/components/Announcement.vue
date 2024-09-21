@@ -4,7 +4,7 @@
 
 <template>
   <div class="a">
-    <p><i class="bi bi-megaphone-fill"></i>&nbsp;Heads up, Cloudflare DDoS blocking is enabled on this website!</p>
+    <p><i class="bi bi-megaphone-fill"></i>&nbsp;此網站有資安問題！我正在修復網站安全系統！</p>
   </div>
 </template>
 <style scoped>
