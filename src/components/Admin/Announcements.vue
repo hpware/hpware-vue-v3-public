@@ -27,7 +27,6 @@ const Announce = () => {
 }
 </script>
 <template>
-  <br>
   <form action="https://automation.yuanh.xyz/webhook/e8290778-734f-4ea6-81c1-858ec28273123ke-公告訊息輸入" method="POST">
     <input type="hidden" name="key" value="e8290778we">
     <input type="hidden" name="username" id="username" :value="USER">
@@ -52,9 +51,6 @@ const Announce = () => {
 </template>
 
 <style scoped>
-  button {
-    color:black;
-  }
 input, textarea {
   border-radius: 5px;
   padding: 10px;
