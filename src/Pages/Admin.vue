@@ -4,12 +4,12 @@
 import { ref } from 'vue';
 import NavSpace from '@/components/Other/NavSpace.vue';
 // Login Function
-const login = ref('no');
+const login = ref('nan');
 const username = ref('');
 const logout = ref('');
 const ENVusername = import.meta.env.VITE_ADMINUSERNAME;
 const pwd = ref('');
-const ENVpwd = import.meta.env.VITE_ADMINPWD;
+const ENVpwd = '';
 const checkUser = () => {
   if (pwd.value === ENVpwd && username.value === ENVusername) {
     login.value = 'yes';
@@ -82,8 +82,8 @@ const changePasswordAction = () => {
     </div>
     <div v-if="login === 'failed'">
       <i class="bi bi-person-circle" style="font-size: 3em; color: red;"></i>
-      <p>登入失敗 ( •̯́ ^ •̯̀)</p><br>
-      <button onclick="window.location.href=window.location.href" style="background-color:khaki">重試</button>
+      <p>登入系統有資安問題，此頁面已移除。 ( •̯́ ^ •̯̀)</p><br>
+      <!--<button onclick="window.location.href=window.location.href" style="background-color:khaki">重試</button>-->
     </div>
   </div>
 </template>
