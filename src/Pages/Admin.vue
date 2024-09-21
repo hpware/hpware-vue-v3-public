@@ -3,7 +3,6 @@
 'use server';
 import { ref } from 'vue';
 import NavSpace from '@/components/Other/NavSpace.vue';
-require('dotenv').config();
 // Login Function
 const login = ref('no');
 const username = ref('');
