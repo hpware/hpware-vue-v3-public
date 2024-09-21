@@ -4,7 +4,7 @@
 import { ref } from 'vue';
 import NavSpace from '@/components/Other/NavSpace.vue';
 // Login Function
-const login = ref('nan');
+const login = ref('failed');
 const username = ref('');
 const logout = ref('');
 const ENVusername = import.meta.env.VITE_ADMINUSERNAME;
