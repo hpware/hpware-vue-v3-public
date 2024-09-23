@@ -89,8 +89,7 @@ const changePasswordAction = () => {
       <p>這個網頁必須登入才可使用</p><br>
       <form @submit="checkUser">
 				<label for="username">使用者</label><br>
-
-				<input type="user" v-model="username" required><br>
+				<input type="text" id="username" v-model="username" required><br>
         <label for="password">&nbsp;密碼</label><br>
         <input type="password" v-model="pwd" required>
         <br>
