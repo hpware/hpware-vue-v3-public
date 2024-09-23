@@ -15,16 +15,16 @@ const ENVusername = import.meta.env.VITE_ADMINUSERNAME;
 const cookieUSERNAME = ref(import.meta.env.VITE_ADMINUSERNAME);
 
 const pwd = ref('');
-const pwde = ref('');
-const ENVpwd = SHA256(import.meta.env.VITE_ADMINPWD).toString();
+// const ENVpwd = SHA256(import.meta.env.VITE_ADMINPWD).toString();
+const ENVpwdHASH = import.meta.env.VITE_ADMINPWDHASH;
 
 // Check Login Creds
 if (cookie.get('admin-login') === `yes_${{cookieUSERNAME}}`) {
   login.value = 'yes';
 }
 const checkUser = () => {
-  const pwde = SHA256(pwd.value).toString();
-  if (pwde === ENVpwd && username.value === ENVusername) {
+  const pwdHASH = SHA256(pwd.value).toString();
+  if (pwdHASH === ENVpwdHASH && username.value === ENVusername) {
     cookie.set('admin-login', `yes_${{username}}` , { expires: '1d' }, );
     login.value = 'yes';
   } else {
