@@ -98,7 +98,7 @@ const changePasswordAction = () => {
     </div>
     <div v-if="login === 'failed'">
       <i class="bi bi-person-circle" style="font-size: 3em; color: red;"></i>
-      <p>登入系統有資安問題，此頁面已移除。 ( •̯́ ^ •̯̀)</p><br>
+      <p>密碼錯誤或使用者不存在  ( •̯́ ^ •̯̀)</p><br>
       <button onclick="window.location.href=window.location.href" style="background-color:khaki">重試</button>
     </div>
   </div>
