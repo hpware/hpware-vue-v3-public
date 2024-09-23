@@ -4,20 +4,28 @@
 import { ref } from 'vue';
 import NavSpace from '@/components/Other/NavSpace.vue';
 import cookie from 'vue-cookie';
+import CryptoJS from 'crypto-js';
+import AES from "crypto-js/aes";
+import SHA256 from "crypto-js/sha256";
 // Login Function
 const login = ref('no');
 const username = ref('');
 const logout = ref('');
 const ENVusername = import.meta.env.VITE_ADMINUSERNAME;
+const cookieUSERNAME = ref(import.meta.env.VITE_ADMINUSERNAME);
+
 const pwd = ref('');
-const ENVpwd = import.meta.env.VITE_ADMINPWD;
+const pwde = ref('');
+const ENVpwd = SHA256(import.meta.env.VITE_ADMINPWD).toString();
+
 // Check Login Creds
-if (cookie.get('admin-login') === 'yes') {
+if (cookie.get('admin-login') === `yes_${{cookieUSERNAME}}`) {
   login.value = 'yes';
 }
 const checkUser = () => {
-  if (pwd.value === ENVpwd && username.value === ENVusername) {
-    cookie.set('admin-login', 'yes' , { expires: '1d' });
+  const pwde = SHA256(pwd.value).toString();
+  if (pwde === ENVpwd && username.value === ENVusername) {
+    cookie.set('admin-login', `yes_${{username}}` , { expires: '1d' }, );
     login.value = 'yes';
   } else {
     login.value = 'failed';
@@ -49,7 +57,7 @@ const logoutAction = () => {
   cookie.set('admin-login', 'no' ,);
 }
 const changePasswordAction = () => {
-  alert('密碼更改功能暫時未開放使用');
+  alert('密碼更改功能暫時未開放使用\n請聯絡網站管理員或上 vercel.app 更改密碼\n謝謝 :) ');
 }
 </script>
 
@@ -64,12 +72,12 @@ const changePasswordAction = () => {
       <button @click="toggleAnnouncements();">更改公告</button>
       <NavSpace />
       <button @click="toggleBlogCreate();">新增文章</button>
-      <Transition name="fade">
+      <Transition name="fade" duration="100">
         <div v-if="AnnouncementsTransition">
           <Announcements />
         </div>
       </Transition>
-      <Transition name="fade">
+      <Transition name="fade" duration="100">
         <div v-if="BlogCreateTransition">
           <CreateBlog />
         </div>
