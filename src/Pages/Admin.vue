@@ -3,20 +3,27 @@
 'use server';
 import { ref } from 'vue';
 import NavSpace from '@/components/Other/NavSpace.vue';
+import cookie from 'vue-cookie';
 // Login Function
-const login = ref('failed');
+const login = ref('no');
 const username = ref('');
 const logout = ref('');
 const ENVusername = import.meta.env.VITE_ADMINUSERNAME;
 const pwd = ref('');
-const ENVpwd = '';
+const ENVpwd = import.meta.env.VITE_ADMINPWD;
+// Check Login Creds
+if (cookie.get('admin-login') === 'yes') {
+  login.value = 'yes';
+}
 const checkUser = () => {
   if (pwd.value === ENVpwd && username.value === ENVusername) {
+    cookie.set('admin-login', 'yes' , { expires: '1d' });
     login.value = 'yes';
   } else {
     login.value = 'failed';
   }
 }
+
 // Announcements
 import Announcements from '@/components/Admin/Announcements.vue'
 const AnnouncementsTransition = ref(false);
@@ -39,6 +46,7 @@ const toggleBlogCreate = () => {
 const logoutAction = () => {
   login.value = '';
   logout.value = 'yes';
+  cookie.set('admin-login', 'no' ,);
 }
 const changePasswordAction = () => {
   alert('密碼更改功能暫時未開放使用');
@@ -56,7 +64,7 @@ const changePasswordAction = () => {
       <button @click="toggleAnnouncements();">更改公告</button>
       <NavSpace />
       <button @click="toggleBlogCreate();">新增文章</button>
-      <!--<Transition name="fade">
+      <Transition name="fade">
         <div v-if="AnnouncementsTransition">
           <Announcements />
         </div>
@@ -65,7 +73,7 @@ const changePasswordAction = () => {
         <div v-if="BlogCreateTransition">
           <CreateBlog />
         </div>
-      </Transition>-->
+      </Transition>
 
 
     </div>
@@ -73,6 +81,7 @@ const changePasswordAction = () => {
       <p>這個網頁必須登入才可使用</p><br>
       <form @submit="checkUser">
 				<label for="username">使用者</label><br>
+
 				<input type="user" v-model="username" required><br>
         <label for="password">&nbsp;密碼</label><br>
         <input type="password" v-model="pwd" required>
@@ -83,7 +92,7 @@ const changePasswordAction = () => {
     <div v-if="login === 'failed'">
       <i class="bi bi-person-circle" style="font-size: 3em; color: red;"></i>
       <p>登入系統有資安問題，此頁面已移除。 ( •̯́ ^ •̯̀)</p><br>
-      <!--<button onclick="window.location.href=window.location.href" style="background-color:khaki">重試</button>-->
+      <button onclick="window.location.href=window.location.href" style="background-color:khaki">重試</button>
     </div>
   </div>
 </template>
