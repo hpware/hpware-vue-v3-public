@@ -59,7 +59,7 @@ const changePasswordAction = () => {
     <h4 v-if="logout === 'yes'"><i class="bi bi-box-arrow-left"></i>&nbsp;登出成功!</h4>
     <div v-if="login === 'yes'">
       <button @click="logoutAction();" class="not-a-button"><i class="bi bi-box-arrow-left"></i>登出</button><button @click="changePasswordAction" class="not-a-button"><i class="bi bi-option"></i> 更改密碼</button><br>
-      <i class="bi bi-person-circle" style="font-size: 3em; color: #5ad9ef;"></i><br>
+      <i class="bi bi-person-circle" style="font-size: 3em; color: #5ad9ef;"></i><br><span style="color: #5ad9ef;">{{ ENVusername }}</span><br>
       <h4>Actions:</h4>
       <button @click="toggleAnnouncements();">更改公告</button>
       <NavSpace />

@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import NavSpace from '@/components/Other/NavSpace.vue'
+import { ref } from 'vue';
+
 </script>
 <template>
   <img alt="hpware" class="logo" src="https://utfs.io/f/CCLPSN5W2HD5ziRBkeSZ5pJYf32lWLvIK8uGb41xkHCUnXm7" draggable="false"/>
