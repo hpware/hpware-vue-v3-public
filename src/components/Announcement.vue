@@ -4,9 +4,9 @@
 
 <template>
   <div class="a">
+    <p><i class="bi bi-megaphone-fill"></i>&nbsp;現在網站安全性已提高，但還是有些功能還是用Plain Text Password ，這周內會完成移轉。</p>
   </div>
 </template>
-
 <style scoped>
 
 .a {
