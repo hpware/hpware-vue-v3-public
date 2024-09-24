@@ -1,6 +1,18 @@
-<script setup lang="ts">
-import NavSpace from '@/components/Other/NavSpace.vue'
-import { ref } from 'vue';
+<script setup>
+// <head>
+useHead({
+  title: 'My awesome site',
+  meta: [
+    { charset: 'utf-8' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    {
+      hid: 'description',
+      name: 'description',
+      content: 'My awesome site',
+    },
+  ],
+})
+
 
 </script>
 <template>
