@@ -7,7 +7,7 @@ import cookie from 'vue-cookie';
 import CryptoJS from 'crypto-js';
 import AES from "crypto-js/aes";
 import SHA256 from "crypto-js/sha256";
-
+import VueHcaptcha from '@hcaptcha/vue3-hcaptcha';
 // Ref Logout
 
 // Login Function
@@ -36,15 +36,18 @@ const checkUser = () => {
 
 </script>
 
+
 <template>
   <div class="admin-page">
     <div v-if="login === 'no'">
-      <p>這個網頁必須登入才可使用</p><br>
+      <p>使用者 & 管理員登入系統</p><br>
       <form @submit="checkUser">
         <label for="username">使用者</label><br>
         <input type="text" id="username" v-model="username" required><br>
         <label for="password">&nbsp;密碼</label><br>
         <input type="password" v-model="pwd" required>
+        <br>
+        <vue-hcaptcha sitekey="e5d8783a-6408-45fe-a696-26180600ba34"></vue-hcaptcha>
         <br>
         <button type="submit">送出</button>
       </form>
