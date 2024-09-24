@@ -8,11 +8,12 @@ import CryptoJS from 'crypto-js';
 import AES from "crypto-js/aes";
 import SHA256 from "crypto-js/sha256";
 
+// Ref Logout
+const data_1vfiqc3 = new URLSearchParams(window.location.search).get('data_1vfiqc3');
 
 // Login Function
 const login = ref('no');
 const username = ref('');
-const logout = ref('');
 const ENVusername = import.meta.env.VITE_ADMINUSERNAME;
 const cookieUSERNAME = ref(import.meta.env.VITE_ADMINUSERNAME);
 
@@ -22,7 +23,7 @@ const ENVpwdHASH = import.meta.env.VITE_ADMINPWDHASH;
 
 // Check Login Creds
 if (cookie.get('admin-login') === `yes_${{cookieUSERNAME}}`) {
-  login.value = 'yes';
+  window.location.href="/admin/panel";
 }
 const checkUser = () => {
   const pwdHASH = SHA256(pwd.value).toString();
@@ -34,20 +35,11 @@ const checkUser = () => {
   }
 }
 
-
-// Logout & Change Password (Nav Bar for Admins)
-const logoutAction = () => {
-  login.value = '';
-  logout.value = 'yes';
-  cookie.set('admin-login', 'no' ,);
-}
-const changePasswordAction = () => {
-  alert('密碼更改功能暫時未開放使用\n請聯絡網站管理員或上 vercel.app 更改密碼\n謝謝 :) ');
-}
 </script>
 
 <template>
-  <div class="admin-page">
+  <div class="admin-page">]
+    <p v-if="data_1vfiqc3">你已登出成功!</p>
     <div v-if="login === 'no'">
       <p>這個網頁必須登入才可使用</p><br>
       <form @submit="checkUser">

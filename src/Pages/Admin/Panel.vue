@@ -37,13 +37,17 @@ if (logged_in === 'yes') {
     }
   }
 }
+// Change Password
+const changePasswordAction = () => {
+  alert('密碼更改功能暫時未開放使用\n請聯絡網站管理員或上 vercel.app 更改密碼\n謝謝 :) ');
+}
 </script>
 
 <template>
   <div class="admin-page">
-    <h3>管理員系統</h3>
-    <div v-if="logged_in === 'yes'">>
-      <button @click="logoutAction();" class="not-a-button"><i class="bi bi-box-arrow-left"></i>登出</button><button @click="changePasswordAction" class="not-a-button"><i class="bi bi-option"></i> 更改密碼</button><br>
+    <h3>管理員控制台</h3>
+    <div v-if="logged_in === 'yes'">
+      <button @click="window.location.href=;" class="not-a-button"><i class="bi bi-box-arrow-left"></i>登出</button><button @click="changePasswordAction" class="not-a-button"><i class="bi bi-option"></i> 更改密碼</button><br>
       <i class="bi bi-person-circle" style="font-size: 3em; color: #5ad9ef;"></i><br><span style="color: #5ad9ef;">{{ ENVusername }}</span><br>
       <h4>Actions:</h4>
       <button @click="toggleAnnouncements();">更改公告</button>
@@ -63,7 +67,7 @@ if (logged_in === 'yes') {
     <div v-else>
       <meta http-equiv="refresh" content="5;url=/admin/login?ref=failed_login">
       <h4 id="countdown"></h4>
-      <p>這個網頁必須登入才可使用</p>
+      <p>這個網頁必須登入才可使用！</p>
       <p>Login <a href="/admin/login?ref=failed_login">Here</a></p>
     </div>
   </div>
