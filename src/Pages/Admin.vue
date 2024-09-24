@@ -64,6 +64,8 @@ const changePasswordAction = () => {
 </script>
 
 <template>
+  <title>管理員登入</title>
+  <meta http-equiv="refresh" content="0;url=/user/login?ref=old-admin" />
   <div class="admin-page">
     <h3>管理員系統</h3>
     <h4 v-if="logout === 'yes'"><i class="bi bi-box-arrow-left"></i>&nbsp;登出成功!</h4>
