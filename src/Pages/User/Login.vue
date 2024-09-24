@@ -38,6 +38,7 @@ const checkUser = () => {
 
 
 <template>
+  <title>使用者 & 管理員登入系統 | 吳元皓的網站 v3</title>
   <div class="admin-page">
     <div v-if="login === 'no'">
       <p>使用者 & 管理員登入系統</p><br>
@@ -47,7 +48,7 @@ const checkUser = () => {
         <label for="password">&nbsp;密碼</label><br>
         <input type="password" v-model="pwd" required>
         <br>
-        <vue-hcaptcha sitekey="e5d8783a-6408-45fe-a696-26180600ba34"></vue-hcaptcha>
+        <vue-hcaptcha sitekey="e5d8783a-6408-45fe-a696-26180600ba34" theme="dark" ></vue-hcaptcha>
         <br>
         <button type="submit">送出</button>
       </form>
@@ -58,7 +59,7 @@ const checkUser = () => {
       <button onclick="window.location.href=window.location.href" style="background-color:khaki">重試</button>
     </div>
     <div v-if="login === 'yes'">
-      <meta http-equiv="refresh" content="0;url=/admin/panel" />
+      <meta http-equiv="refresh" content="0;url=/user/admin/panel" />
     </div>
   </div>
 </template>
@@ -67,14 +68,12 @@ const checkUser = () => {
 button {
   color: black;
 }
-input, textarea {
+input {
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
   border: 1px solid #ccc;
-}
-textarea {
-  font-family: Arial, Helvetica, sans-serif;
+  color: blue;
 }
 .not-a-button {
   background-color: transparent;
