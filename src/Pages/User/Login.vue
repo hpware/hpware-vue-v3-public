@@ -22,7 +22,7 @@ const ENVpwdHASH = import.meta.env.VITE_ADMINPWDHASH;
 
 // Check Login Creds
 if (cookie.get('admin-login') === `yes_${{cookieUSERNAME}}`) {
-  window.location.href="/admin/panel";
+  window.location.href="/user/admin/panel";
 }
 const checkUser = () => {
   const pwdHASH = SHA256(pwd.value).toString();
