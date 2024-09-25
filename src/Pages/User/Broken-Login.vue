@@ -49,8 +49,8 @@ if (true) {
         <input type="password" v-model="pwd" required />
         <br />
         <vue-hcaptcha
-            sitekey="e5d8783a-6408-45fe-a696-26180600ba34"
-            theme="dark"
+          sitekey="e5d8783a-6408-45fe-a696-26180600ba34"
+          theme="dark"
         ></vue-hcaptcha>
         <br />
         <button type="submit">送出</button>
@@ -61,8 +61,8 @@ if (true) {
       <p>密碼錯誤或使用者不存在 ( •̯́ ^ •̯̀)</p>
       <br />
       <button
-          onclick="window.location.href=window.location.href"
-          style="background-color: khaki"
+        onclick="window.location.href=window.location.href"
+        style="background-color: khaki"
       >
         重試
       </button>
