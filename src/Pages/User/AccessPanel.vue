@@ -45,6 +45,7 @@ const changePasswordAction = () => {
 const BusTrackAction = () => {
   window.location.href = "/user/area/BusTrack";
 };
+
 </script>
 
 <template>
@@ -61,12 +62,12 @@ const BusTrackAction = () => {
       <button @click="toggleAnnouncements()">更改公告</button>
       <NavSpace />
       <button @click="toggleBlogCreate()">新增文章</button>
-      <Transition name="fade" duration="100">
+      <Transition name="fade">
         <div v-if="AnnouncementsTransition">
           <Announcements />
         </div>
       </Transition>
-      <Transition name="fade" duration="100">
+      <Transition name="fade">
         <div v-if="BlogCreateTransition">
           <CreateBlog />
         </div>

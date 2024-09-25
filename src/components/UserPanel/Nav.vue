@@ -3,24 +3,14 @@ import { ref } from "vue";
 import NavSpace from "@/components/Other/NavSpace.vue";
 import cookie from "vue-cookie";
 const ENVusername = import.meta.env.VITE_ADMINUSERNAME;
-// Change Password & Logout
-const changePasswordAction = () => {
-  window.location.href = "/user/area/hashcreate?changepwd";
-};
-const logoutAction = () => {
-  window.location.href = "/user/logout";
-};
-const HomeAction = () => {
-  window.location.href = "/user/AccessPanel";
-};
 </script>
 
 <template>
-  <button @click="HomeAction" class="not-a-button">
-    <i class="bi bi-house"></i> 首頁
+  <button class="not-a-button">
+    <a href="/user/accesspanel" class="button1"><i class="bi bi-house"></i> 首頁</a>
   </button>
-  <button @click="logoutAction()" class="not-a-button">
-    <i class="bi bi-box-arrow-left"></i>登出</button
+  <button class="not-a-button">
+    <a href="/user/logout" class="button1"><i class="bi bi-box-arrow-left"></i> 登出</a></button
   ><br />
   <i class="bi bi-person-circle" style="font-size: 3em; color: #5ad9ef"></i
   ><br /><span style="color: #5ad9ef">{{ ENVusername }}</span
@@ -44,5 +34,10 @@ span.user-tag {
   border-radius: 3em;
   padding: 2px;
   font-size: 0.7em;
+}
+a.button1 {
+  background-color: transparent;
+  color: rgba(191, 191, 191, 0.7);
+  text-decoration: none;
 }
 </style>
