@@ -1,15 +1,11 @@
 <script setup>
 import cookie from "vue-cookie";
 
-if (cookie.get('admin-login') === `yes_${{cookieUSERNAME}}`) {
-  window.location.href="/user/admin/panel";
+if (cookie.get("admin-login") === `yes_${{ cookieUSERNAME }}`) {
+  window.location.href = "/user/admin/panel";
 }
 </script>
 
-<template>
+<template></template>
 
-</template>
-
-<style scoped>
-
-</style>
+<style scoped></style>

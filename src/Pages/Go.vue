@@ -1,48 +1,40 @@
 <script setup>
-const goLink = new URLSearchParams(window.location.search).get('l');
+const goLink = new URLSearchParams(window.location.search).get("l");
 if (goLink === "ig") {
   window.location.href = "https://www.instagram.com/yh_.5_26/?ref=yuanh.xyz";
-}
-else if (goLink === "gh") {
+} else if (goLink === "gh") {
   window.location.href = "https://github.com/hpware?ref=yuanh.xyz";
-}
-else if (goLink === "th") {
-  const PostURL = new URLSearchParams(window.location.search).get('post');
+} else if (goLink === "th") {
+  const PostURL = new URLSearchParams(window.location.search).get("post");
   if (!PostURL) {
     window.location.href = "https://threads.net/@yh_.5_26?ref=yuanh.xyz";
   } else if (PostURL) {
     window.location.href = `https://threads.net/@yh_.5_26/post/${PostURL}?ref=yuanh.xyz`;
   }
-}
-else if (goLink === "em") {
+} else if (goLink === "em") {
   window.location.href = "mailto:web@yuanhau.com";
-}
-else if (goLink === "old-site") {
-  window.location.href = "https://v2.yuanh.xyz?ref=yuanh.xyz"
-}
-else if (goLink === "gh-repo") {
-  window.location.href = "https://github.com/hpware/hpware-vue-v3?ref=yuanh.xyz"
-}
-else if (goLink === "en-site") {
+} else if (goLink === "old-site") {
+  window.location.href = "https://v2.yuanh.xyz?ref=yuanh.xyz";
+} else if (goLink === "gh-repo") {
+  window.location.href =
+    "https://github.com/hpware/hpware-vue-v3?ref=yuanh.xyz";
+} else if (goLink === "en-site") {
   window.location.href = "https://hwtw.cc?ref=yuanh.xyz";
-}
-else if (goLink === "analytics") {
-  window.location.href= "https://vd.yuanhau.com?ref=yuanh.xyz"
-}
-else if (goLink === "blog") {
-  const blogPost = new URLSearchParams(window.location.search).get('p');
+} else if (goLink === "analytics") {
+  window.location.href = "https://vd.yuanhau.com?ref=yuanh.xyz";
+} else if (goLink === "blog") {
+  const blogPost = new URLSearchParams(window.location.search).get("p");
   if (!blogPost) {
     window.location.href = "https://yuanhau.com?ref=yuanh.xyz";
   } else if (blogPost) {
     window.location.href = `https://yuanhau.com/?p=${blogPost}?ref=yuanh.xyz`;
   }
-}
-else if (goLink === "git") {
-  const GitRepo = new URLSearchParams(window.location.search).get('repo');
-  const Username = new URLSearchParams(window.location.search).get('user');
+} else if (goLink === "git") {
+  const GitRepo = new URLSearchParams(window.location.search).get("repo");
+  const Username = new URLSearchParams(window.location.search).get("user");
   if (!Username) {
     window.location.href = `https://git.hwtw.cc/howard/${GitRepo}?ref=yuanh.xyz`;
-    } else if (Username) {
+  } else if (Username) {
     if (repo) {
       window.location.href = `https://git.hwtw.cc/${Username}/${GitRepo}?ref=yuanh.xyz`;
     } else {
@@ -51,8 +43,7 @@ else if (goLink === "git") {
   } else {
     window.location.href = "/OopsError";
   }
-}
-else {
+} else {
   window.location.href = "/OopsError";
 }
 </script>

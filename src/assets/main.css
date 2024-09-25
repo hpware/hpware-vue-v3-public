@@ -40,7 +40,7 @@ nav {
 hr {
   align-items: center;
   text-align: center;
-  width:80%;
+  width: 80%;
 }
 
 button {
@@ -59,7 +59,7 @@ button:hover {
   background-color: #4f9c82;
 }
 footer {
-  text-align:center;
+  text-align: center;
   p {
     font-size: 0.9em;
     margin-bottom: 0;
@@ -70,13 +70,13 @@ footer {
   }
 }
 br.mobile {
-  display:none;
+  display: none;
 }
 br.desktop {
   display: block;
 }
 span.mobile {
-  display:none;
+  display: none;
 }
 span.desktop {
   display: block;
@@ -85,8 +85,8 @@ h2.pagetitle {
   margin-top: 0.3em;
 }
 h1.nametitle {
-    margin-top: 0.3em;
-    margin-butom: 0em;
+  margin-top: 0.3em;
+  margin-butom: 0em;
 }
 @media (max-width: 502px) {
   br.mobile {
@@ -103,18 +103,17 @@ h1.nametitle {
   }
 }
 @media (max-width: 600px) {
-      body {
-        font-size: 1.5em;
-    }
+  body {
+    font-size: 1.5em;
+  }
 
-    h1 {
-        font-size: 2em;
-        margin-bottom: 0;
-    }
+  h1 {
+    font-size: 2em;
+    margin-bottom: 0;
+  }
 
-    p {
-        font-size: 1em;
-        margin-bottom: 0;
-
-    }
+  p {
+    font-size: 1em;
+    margin-bottom: 0;
+  }
 }

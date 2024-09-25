@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const url = import.meta.url;
 const path = new URL(url).pathname;
@@ -8,11 +8,13 @@ const modules = ref([]);
 
 for (const ImageBoard of ImageBoards) {
   if (ImageBoard !== "Index") {
-    import(`@/components/ImageBoards/${ImageBoard}.vue`).then(module => {
-      modules.value.push(module);
-    }).catch(err => {
-      console.error(err);
-    });
+    import(`@/components/ImageBoards/${ImageBoard}.vue`)
+      .then((module) => {
+        modules.value.push(module);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   }
 }
 </script>
@@ -23,5 +25,4 @@ for (const ImageBoard of ImageBoards) {
   </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
