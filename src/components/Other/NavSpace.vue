@@ -1,5 +1,7 @@
-<script setup lang="ts"></script>
+<<script setup></script>
 
-<template>&nbsp;<br class="mobile" /></template>
+<template><span class="desktop">&nbsp;</span><br class="mobile" /></template>
 
-<style scoped></style>
+<style scoped>
+
+</style>
