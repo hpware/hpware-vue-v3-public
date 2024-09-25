@@ -1,6 +1,5 @@
 <script setup>
 // Default
-"use server";
 import { ref } from "vue";
 import NavSpace from "@/components/Other/NavSpace.vue";
 import cookie from "vue-cookie";
@@ -16,7 +15,6 @@ const ENVusername = import.meta.env.VITE_ADMINUSERNAME;
 const cookieUSERNAME = ref(import.meta.env.VITE_ADMINUSERNAME);
 
 const pwd = ref("");
-// const ENVpwd = SHA256(import.meta.env.VITE_ADMINPWD).toString();
 const ENVpwdHASH = import.meta.env.VITE_ADMINPWDHASH;
 
 // Check Login Creds
@@ -65,7 +63,7 @@ const changePasswordAction = () => {
 </script>
 
 <template>
-  <title>管理員登入</title>
+  <title>管理員登入重新導向 | 吳元皓的網站 v3</title>
   <meta http-equiv="refresh" content="0;url=/user/login?ref=old-admin" />
   <div class="admin-page">
     <h3>管理員系統</h3>

@@ -1,7 +1,8 @@
 <script setup></script>
 
 <template>
-  <h3>AdGuard Block List & Allow List</h3>
+  <title>AdGuard 封鎖列表與允許列表 | 吳元皓的網站 v3</title>
+  <h3>AdGuard 封鎖列表與允許列表</h3>
   <h4>封鎖列表</h4>
   Line.txt<br />
   /block_list/line-ads.txt 放入 AdGuard home<br /><br />

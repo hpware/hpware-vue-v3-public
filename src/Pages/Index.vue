@@ -1,19 +1,9 @@
 <script setup>
-// <head>
-useHead({
-  title: "My awesome site",
-  meta: [
-    { charset: "utf-8" },
-    { name: "viewport", content: "width=device-width, initial-scale=1" },
-    {
-      hid: "description",
-      name: "description",
-      content: "My awesome site",
-    },
-  ],
-});
+// Init
+import NavSpace from "@/components/Other/NavSpace.vue";
 </script>
 <template>
+  <title>首頁 | 吳元皓的網站 v3</title>
   <img
     alt="hpware"
     class="logo"

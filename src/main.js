@@ -27,6 +27,10 @@ console.log(
   "%cThis is a browser feature intended for developers. Do not copy anything here.\n",
   "font-size: 20px; font-weight: bold; color: red;",
 );
+console.log(
+  "%c這個功能是給網站開發者使用，請不要在這裡複製任何代碼。\n",
+  "font-size: 20px; font-weight: bold; color: red;",
+);
 app.use(posthog);
 app.use(router);
 app.mount("#app");

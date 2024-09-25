@@ -12,10 +12,8 @@ const pages = {
 const component = ref(null);
 if (pages[page_content]) {
   component.value = defineAsyncComponent(pages[page_content]);
-  var displaytitle = ref(true);
 } else {
   component.value = OopsError;
-  var displaytitle = ref(false);
 }
 </script>
 <template>
@@ -23,4 +21,5 @@ if (pages[page_content]) {
   <div class="aboutthisproject" id="project">
     <component :is="component"></component>
   </div>
+  <title>關於這個GitHub組織 | 吳元皓的網站 v3</title>
 </template>

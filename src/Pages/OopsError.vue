@@ -1,6 +1,7 @@
 <script setup></script>
 
 <template>
+  <title>404 | 吳元皓的網站 v3</title>
   <h1>404</h1>
   <p lang="zh-tw">
     穿梭者，你好<br />

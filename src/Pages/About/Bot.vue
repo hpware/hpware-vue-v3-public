@@ -13,7 +13,6 @@ const pages = {
 const component = ref(null);
 if (pages[page_content]) {
   component.value = defineAsyncComponent(pages[page_content]);
-  const displaytitle = true;
 } else {
   component.value = OopsError;
 }
@@ -23,4 +22,5 @@ if (pages[page_content]) {
   <div class="aboutthisproject" id="project">
     <component :is="component"></component>
   </div>
+  <title>關於這個機器人 | 吳元皓的網站 v3</title>
 </template>

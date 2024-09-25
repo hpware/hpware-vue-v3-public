@@ -48,5 +48,6 @@ if (goLink === "ig") {
 }
 </script>
 <template>
+  <title>重新導向 | 吳元皓的網站 v3</title>
   <h1 id="redirect">Redirecting...</h1>
 </template>

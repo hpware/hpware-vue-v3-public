@@ -44,7 +44,6 @@ const checkUser = (event) => {
     login.value = "failed";
   }
 };
-
 </script>
 
 <template>

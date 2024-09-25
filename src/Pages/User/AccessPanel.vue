@@ -59,8 +59,8 @@ const logoutAction = () => {
       <i class="bi bi-person-circle" style="font-size: 3em; color: #5ad9ef"></i
       ><br /><span style="color: #5ad9ef">{{ ENVusername }}</span
       ><br />
-<span class=“user-tag”><i class=“bi bi-tag”></i>&nbsp;管理員</span>
-<br />
+      <span class="user-tag"><i class="bi bi-tag"></i>&nbsp;管理員</span>
+      <br />
       <h4>管理員系統:</h4>
       <button @click="toggleAnnouncements()">更改公告</button>
       <NavSpace />
@@ -110,7 +110,9 @@ textarea {
   font-size: 1em;
   cursor: pointer;
   border-radius: 50%;
+}
 span.user-tag {
-background-color: grey;
+  background-color: grey;
+  color: white;
 }
 </style>

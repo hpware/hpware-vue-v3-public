@@ -31,6 +31,7 @@ if (pages[page_content]) {
   <div class="aboutthisproject" id="project">
     <component :is="component"></component>
   </div>
+  <title>關於這個專案 | 吳元皓的網站 v3</title>
 </template>
 
 <style scoped>

@@ -1,5 +1,6 @@
 <script setup></script>
 <template>
+  <title>關於我 | 吳元皓的網站 v3</title>
   <h2 class="pagetitle">關於我</h2>
   <section id="aboutme">
     <h3>自我介紹</h3>

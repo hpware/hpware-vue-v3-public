@@ -12,7 +12,7 @@ if (cookie.get("user")) {
   <div>
     <p>此功能未完成 ( •̯́ ^ •̯̀)</p>
     <br />
-</div>
+  </div>
 </template>
 
 <style scoped></style>

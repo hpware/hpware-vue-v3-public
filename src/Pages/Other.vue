@@ -1,6 +1,7 @@
 <script setup></script>
 
 <template>
+  <title>其他 | 吳元皓的網站 v3</title>
   <h2>其他</h2>
   <p>
     <RouterLink to="/InfectedSites">已中毒網站與網頁</RouterLink><br />
