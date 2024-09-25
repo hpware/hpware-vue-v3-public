@@ -20,11 +20,22 @@ const pwd = ref("");
 // const ENVpwd = SHA256(import.meta.env.VITE_ADMINPWD).toString();
 const ENVpwdHASH = import.meta.env.VITE_ADMINPWDHASH;
 
+// Captcha
+const captchaToken = ref("");
+const onCaptchaVerified = (token) => {
+  captchaToken.value = token;
+};
+
 // Check Login Creds
 if (cookie.get("admin-login") === `yes_${{ cookieUSERNAME }}`) {
   window.location.href = "/user/admin/panel";
 }
-const checkUser = () => {
+const checkUser = (event) => {
+  event.preventDefault();
+  if (!captchaToken.value) {
+    alert("Please complete the captcha.");
+    return;
+  }
   const pwdHASH = SHA256(pwd.value).toString();
   if (pwdHASH === ENVpwdHASH && username.value === ENVusername) {
     cookie.set("admin-login", `yes_${{ username }}`, { expires: "1d" });
@@ -33,6 +44,7 @@ const checkUser = () => {
     login.value = "failed";
   }
 };
+
 </script>
 
 <template>
@@ -50,6 +62,7 @@ const checkUser = () => {
         <vue-hcaptcha
           sitekey="e5d8783a-6408-45fe-a696-26180600ba34"
           theme="dark"
+          @verify="onCaptchaVerified"
         ></vue-hcaptcha>
         <br />
         <button type="submit">送出</button>
