@@ -1,13 +1,16 @@
 <script setup>
 // Default
-"use server";
 import { ref } from "vue";
-import NavSpace from "@/components/Other/NavSpace.vue";
 import cookie from "vue-cookie";
 import CryptoJS from "crypto-js";
 import AES from "crypto-js/aes";
 import SHA256 from "crypto-js/sha256";
 import VueHcaptcha from "@hcaptcha/vue3-hcaptcha";
+
+import NavSpace from "@/components/Other/NavSpace.vue";
+import Nav from "@/components/UserPanel/Nav.vue";
+import Error from "@/components/UserPanel/Error.vue";
+
 // Ref Logout
 
 // Login Function
@@ -28,17 +31,18 @@ const onCaptchaVerified = (token) => {
 
 // Check Login Creds
 if (cookie.get("admin-login") === `yes_${{ cookieUSERNAME }}`) {
-  window.location.href = "/user/admin/panel";
+  window.location.href = "/user/accesspanel";
 }
 const checkUser = (event) => {
   event.preventDefault();
   if (!captchaToken.value) {
-    alert("Please complete the captcha.");
+    alert("請先完成不是機器人驗證");
     return;
   }
   const pwdHASH = SHA256(pwd.value).toString();
   if (pwdHASH === ENVpwdHASH && username.value === ENVusername) {
     cookie.set("admin-login", `yes_${{ username }}`, { expires: "1d" });
+    cookie.set("user_account", `${{ username }})`, { expires: "1d" });
     login.value = "yes";
   } else {
     login.value = "failed";
@@ -68,18 +72,10 @@ const checkUser = (event) => {
       </form>
     </div>
     <div v-if="login === 'failed'">
-      <i class="bi bi-person-circle" style="font-size: 3em; color: red"></i>
-      <p>密碼錯誤或使用者不存在 ( •̯́ ^ •̯̀)</p>
-      <br />
-      <button
-        onclick="window.location.href=window.location.href"
-        style="background-color: khaki"
-      >
-        重試
-      </button>
+      <Error />
     </div>
     <div v-if="login === 'yes'">
-      <meta http-equiv="refresh" content="0;url=/user/admin/panel" />
+      <meta http-equiv="refresh" content="0;url=/user/accesspanel" />
     </div>
   </div>
 </template>

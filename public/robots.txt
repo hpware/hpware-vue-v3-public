@@ -43,6 +43,7 @@ Disallow: /你在找什麼
 Disallow: /No-Source-Code
 Disallow: /Go
 Disallow: /Beta/
-Disallow: /Admin
+Disallow: /admin
+Disallow: /user/
 
 Sitemap: https://yuanh.xyz/sitemap.xml
