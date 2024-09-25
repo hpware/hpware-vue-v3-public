@@ -1,38 +1,37 @@
 <script setup>
 // Default
-'use server';
-import { ref } from 'vue';
-import NavSpace from '@/components/Other/NavSpace.vue';
-import cookie from 'vue-cookie';
-import CryptoJS from 'crypto-js';
+"use server";
+import { ref } from "vue";
+import NavSpace from "@/components/Other/NavSpace.vue";
+import cookie from "vue-cookie";
+import CryptoJS from "crypto-js";
 import AES from "crypto-js/aes";
 import SHA256 from "crypto-js/sha256";
-import VueHcaptcha from '@hcaptcha/vue3-hcaptcha';
-
+import VueHcaptcha from "@hcaptcha/vue3-hcaptcha";
 
 // Login Function
-const login = ref('no');
-const username = ref('');
+const login = ref("no");
+const username = ref("");
 const ENVusername = import.meta.env.VITE_ADMINUSERNAME;
 const cookieUSERNAME = ref(import.meta.env.VITE_ADMINUSERNAME);
 
-const pwd = ref('');
+const pwd = ref("");
 const ENVpwdHASH = import.meta.env.VITE_ADMINPWDHASH;
 
 // Check Login Creds
-if (cookie.get('admin-login') === `yes_${{cookieUSERNAME}}`) {
-  window.location.href="/user/AccessPanel";
+if (cookie.get("admin-login") === `yes_${{ cookieUSERNAME }}`) {
+  window.location.href = "/user/AccessPanel";
 }
 const checkUser = () => {
   const pwdHASH = SHA256(pwd.value).toString();
-}
-  if () {
-    if(pwdHASH === ENVpwdHASH && username.value === ENVusername) {
-    cookie.set('admin-login', `yes_${{username}}`, {expires: '1d'},);
-    cookie.set('user', `${{username}}`, {expires: '1d'},)
-    login.value = 'yes';
+};
+if (true) {
+  if (pwdHASH === ENVpwdHASH && username.value === ENVusername) {
+    cookie.set("admin-login", `yes_${{ username }}`, { expires: "1d" });
+    cookie.set("user", `${{ username }}`, { expires: "1d" });
+    login.value = "yes";
   } else {
-    login.value = 'failed';
+    login.value = "failed";
   }
 }
 </script>
@@ -52,7 +51,6 @@ const checkUser = () => {
         <vue-hcaptcha
           sitekey="e5d8783a-6408-45fe-a696-26180600ba34"
           theme="dark"
-          @verify="onVerify"
         ></vue-hcaptcha>
         <br />
         <button type="submit">送出</button>
