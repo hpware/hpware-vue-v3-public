@@ -2,7 +2,10 @@
 
 <template>
   <title>Sitting Duck 攻擊 | 吳元皓的網站 v3</title>
-  <img src="https://zz.yuanhau.com/u/V4KPEW.png" alt="Sitting Duck getting attacked."/>
+  <img
+    src="https://zz.yuanhau.com/u/V4KPEW.png"
+    alt="Sitting Duck getting attacked."
+  />
   <h3>您嘗試造訪的網站遭受了Sitting Duck的攻擊</h3>
   <p>
     您可以用以下的連結了解更多相關資訊<br />
