@@ -30,8 +30,8 @@ import "@/assets/main.css";
     <Project
       name="AdGuard Home Block & Allow lists"
       repo="https://github.com/hpware/AdGuard-Block-list"
-      website="https://hpware.github.io/adguard-block-list/README"
-      MoreText="<a href='https://hpware.github.io/adguard-block-list/README-zh'>繁體中文網頁</a>"
+      website="https://gh.yuanh.xyz/adguard-block-list/"
+      MoreText="<a href='https://gh.yuanh.xyz/adguard-block-list/README-zh'>繁體中文網頁</a>"
       about="AdGuard-Block-list"
       between_projects="1"
     ></Project>
