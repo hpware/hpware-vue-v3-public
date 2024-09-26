@@ -1,23 +1,20 @@
-<script setup></script>
+<script setup>
+
+</script>
 
 <template>
   <div class="a">
-    <p>
-      <i class="bi bi-megaphone-fill"></i
-      >&nbsp;現在網站安全性已提高，但還是有些功能還是用Plain Text Password
-      ，這周內會完成移轉。
-    </p>
+    <p><i class="bi bi-megaphone-fill"></i>&nbsp;🫤 <a href="https://wordpress.org/news/2024/09/wp-engine/">WP Engine is not Wordpress</a></p>
   </div>
 </template>
+
 <style scoped>
+
 .a {
   font-size: 0.6em;
   color: yellow;
 }
 a {
-  color: rgba(255, 255, 0, 0.94);
-}
-a:hover {
-  color: rgba(255, 255, 0, 0.87);
+  color: yellow;
 }
 </style>
