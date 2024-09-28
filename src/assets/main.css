@@ -86,7 +86,10 @@ h2.pagetitle {
 }
 h1.nametitle {
   margin-top: 0.3em;
-  margin-butom: 0em;
+  margin-bottom: 0em;
+  font-size:2.2em;
+  font-weight: bold;
+  color: aquamarine;
 }
 @media (max-width: 502px) {
   br.mobile {
@@ -116,4 +119,14 @@ h1.nametitle {
     font-size: 1em;
     margin-bottom: 0;
   }
+}
+.not-a-button {
+  background-color: transparent;
+  border: none;
+  color: rgba(191, 191, 191, 0.7);
+  font-size: 1em;
+  cursor: pointer;
+}
+.not-a-button:hover {
+  background-color: transparent;
 }
