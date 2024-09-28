@@ -4,6 +4,7 @@ import NavSpace from "@/components/Other/NavSpace.vue";
 import {ref} from "vue";
 // Ref
 const moreAbout = ref(false);
+const handPickedImages = ref(false);
 </script>
 <template>
   <title>首頁 | 吳元皓的網站 v3</title>
@@ -19,11 +20,11 @@ const moreAbout = ref(false);
         draggable="false"
         style="margin-bottom:0em;"
     />
-    <h2 style="margin-top: 0em; margin-bottom: 0em;">吳元皓</h2>
-  <p style="margin-top: 0em;margin-bottom: 0em;">Hi! 我是一個學生，現在在臺灣就讀有關資訊工程的五專。
-    <br/>習慣(並熟悉使用 HTML, CSS , Vercel 與 Git & Debian(Ubuntu) Cli<br />
+    <h2 style="margin-top: 0em; margin-bottom: 0em;">Howard (<span>元皓</span></h2>
+  <p style="margin-top: 0em;margin-bottom: 0em;">嗨! 我是一個資訊工程的五專生，我對<a href="https://unsplash.com/@hwtw" target=blank style="color:white;">攝影</a>與前端方面有興趣。
+    <br/>習慣並熟悉使用 HTML, CSS , Vercel 與 Git & Debian(Ubuntu) Cli<br />
        I use some vim btw.</p>
-    <h3 ><button class="not-a-button" style="color:white" @click="moreAbout = !moreAbout">更多資訊</button></h3>
+    <h3><a style="color:white" class="not-a-button" @click="moreAbout = !moreAbout">更多資訊</a></h3>
 
     <br>
   </section>
@@ -71,6 +72,13 @@ const moreAbout = ref(false);
             2022 IIS 10.0 上讓我的爛網站跑起來，但最後還是跑回 Vercel 了。
           </p>
           <hr />
+          <h3>檢定通過</h3>
+          <p>GEPT</p>
+          <span>初級 (2021)</span><br />
+          <span>中級聽讀 (2022)</span>
+          <p>TOEFL</p>
+          <span>Junior Standard Test (2022)</span>
+          <hr />
           <h3>我想學的</h3>
           <span>VueJS</span>&nbsp;
           <span>Python</span>&nbsp;
@@ -110,6 +118,29 @@ const moreAbout = ref(false);
       alt="GitHub Stats Languages that displays what languages I have used on GitHub"
       draggable="false"
     />
+  </section>
+  <hr />
+  <section id="photo">
+    <h3>攝影</h3>
+    <p>我喜歡拍照(但沒拍很好)</p>
+    <a href="https://unsplash.com/@hwtw" target=blank style="color:white;">Unsplash</a>&nbsp;<a @click="handPickedImages = !handPickedImages" style="color:white;" class="not-a-button"><u>我的照片</u></a>
+    <Transition name="fade">
+    <div class="photolist" v-if="handPickedImages">
+    <a href="https://unsplash.com/photos/a-view-of-a-building-from-across-a-hedge-a8nTktTVmxI">
+      <img
+          src="https://images.unsplash.com/photo-1721100152646-1bbfeb581505"
+          draggable="false"
+      />
+    </a>
+      <a href="https://unsplash.com/photos/9QlTkHc6O98">
+      <img
+        src="https://images.unsplash.com/photo-1710587526032-1077f7076543"
+        draggable="false"
+        />
+      </a>
+      <p style="font-size: 0.8em;margin-top:0.5em;">Free to use with the <a href="https://unsplash.com/license">Unsplash License</a></p>
+    </div>
+    </Transition>
   </section>
 </template>
 
@@ -221,6 +252,18 @@ div.experience1 {
   margin-top: 0em;
   margin-bottom: 0em;
   margin-inside: 0em;
+}
+div.photolist {
+  img {
+    width: 40%;
+    margin: 0.5em;
+  }
+  @media (max-width: 800px) {
+    img {
+      width: 90%;
+    }
+  }
+  animation: ease-in-out 100ms zoomIn;
 }
 </style>
 

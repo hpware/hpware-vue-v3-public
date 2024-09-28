@@ -12,7 +12,6 @@ import Announcement from "@/components/Announcement.vue";
       <Transition name="fade">
         <div v-if="navmobile" style="color: rgba(191, 191, 191, 0.7)">
           <RouterLink to="/">首頁</RouterLink><br />
-          <RouterLink to="/Go?l=blog">Blog</RouterLink><br />
           <RouterLink to="/Projects">專案</RouterLink><br />
           <RouterLink to="/Other">其他</RouterLink>
         </div>
@@ -20,7 +19,6 @@ import Announcement from "@/components/Announcement.vue";
     </div>
     <div class="nav-desktop">
       <RouterLink to="/">首頁</RouterLink>&nbsp;
-      <RouterLink to="/Go?l=blog">Blog</RouterLink>&nbsp;
       <RouterLink to="/Projects">專案</RouterLink>&nbsp;
       <RouterLink to="/Other">其他</RouterLink>
     </div>
