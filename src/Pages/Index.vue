@@ -1,19 +1,89 @@
 <script setup>
 // Init
 import NavSpace from "@/components/Other/NavSpace.vue";
+import {ref} from "vue";
+// Ref
+const moreAbout = ref(false);
 </script>
 <template>
   <title>首頁 | 吳元皓的網站 v3</title>
-  <img
-    alt="hpware"
-    class="logo"
-    src="https://utfs.io/f/CCLPSN5W2HD5ziRBkeSZ5pJYf32lWLvIK8uGb41xkHCUnXm7"
-    draggable="false"
-  />
-  <span>@hpware | @yh_.5_26 | @hwtw</span>
+  <meta property="og:title" content="首頁 | 吳元皓的網站 v3" />
+  <meta property="og:site_name" content="吳元皓的網站 v3" />
+  <div class="background">
+  <section id="aboutme" class="about">
+    <br>
+    <img
+        alt="hpware"
+        class="logo"
+        src="https://utfs.io/f/CCLPSN5W2HD5ziRBkeSZ5pJYf32lWLvIK8uGb41xkHCUnXm7"
+        draggable="false"
+        style="margin-bottom:0em;"
+    />
+    <h2 style="margin-top: 0em; margin-bottom: 0em;">吳元皓</h2>
+  <p style="margin-top: 0em;margin-bottom: 0em;">Hi! 我是一個學生，現在在臺灣就讀有關資訊工程的五專。
+    <br/>習慣(並熟悉使用 HTML, CSS , Vercel, VueJS 與 Git & Debian Cli</p>
+    <h3 ><button class="not-a-button" style="color:white" @click="moreAbout = !moreAbout">更多資訊</button></h3>
+
+    <br>
+  </section>
+  </div>
+  <section id="moreabout">
+    <Transition name="fade">
+      <div v-if="moreAbout" class="experience">
+        <div class="experience1">
+          <h4>Web</h4>
+          <p>
+            小時候是我就喜歡用電腦，但我當時一點程式都不會寫。<br />
+            我2020年時剛開始想要並使用自己的Wordpress的部落格
+            <a href="https://hwweb.i234.me/wordpress">hwweb.i234.me/wordpress</a>，
+            <br />但Synology 不讓我把Wordpress放在 Website Root
+            裡面，所以我決定要改預設的檔案來讓使用者到部落格。
+            <br />在Github上發現在我的舊帳號上有一個備份
+            <a href="https://github.com/thehwtw/wncx">github.com/thehwtw/wncx</a
+            >&nbsp;
+            <a href="https://old-hwweb-website.pages.dev/"
+            >網站 (Cloudflare Page Archive)</a
+            >
+            <br />當時的我沒有放入< a > 的標籤，所以不是
+            HyperLink，我當時也沒想太多就繼續使用著。
+            <br />但我在這一年內增加了許多HTML &
+            CSS的知識，讓我更有信心可以在學VueJS。
+          </p>
+          <h4><del>Python</del></h4>
+          <p>
+            我也在國中一年級時開始學習Python，這個也是我想學的語言，但我教學影片只看但10％的地方就放棄了。
+            <br />我也之後大多數都忘記了，連 if else 每次都要查一下，因為我比較習慣用
+            JavaScript 的方式 if {} else if {} else {}。
+          </p>
+          <h4>IT</h4>
+          <p>
+            我在2019年時，發現2018年買的NAS可以放虛擬機器，剛開始只是跑 Windows 7
+            而已，<br />
+            但一段時間後我發現Linux，我也開始學一點Debain Cli (Ubuntu)來安裝服務。<br />
+            主要學習的是 Nginx， Nginx 是一個比較 Flexible 的 Web Server，<br />
+            最近也開始學一點 PHP 主要為簡單的<a
+              href="https://github.com/hpware/php-plugins"
+          >插件</a
+          ><br />
+            也終於學會如何安裝 PHP 與 Nginx，但我還是不會用 Composer。<br />
+            我也對 Windows Server IIS 也有一點經驗，主要的原因是我在 Windows Server
+            2022 IIS 10.0 上讓我的爛網站跑起來，但最後還是跑回 Vercel 了。
+          </p>
+          <hr />
+          <h3>我想學的</h3>
+          <span>VueJS</span> <br class="mobilei" />
+          <span>Python</span> <br class="mobilei" />
+          <span>mySQL</span> <br class="mobilei" />
+          <span>NextJS</span> <br class="mobilei" />
+          <span>Expo</span> <br class="mobilei" />
+          <span>Bash</span>
+        </div>
+      </div>
+    </Transition>
+  </section>
   <hr />
-  <section id="me">
-    <h3>使用的工具</h3>
+  <section id="tools">
+    <h3><i class="bi bi-tools"></i>&nbsp;使用的工具</h3>
     <p>網頁: VSCode, Webstorm, Vim</p>
     <p>Python: VSCode, PyCharm</p>
     <br />
@@ -24,16 +94,6 @@ import NavSpace from "@/components/Other/NavSpace.vue";
         >檔案分享伺服器 Zipline</a
       ><NavSpace /> <a href="https://vd.yuanhau.com">使用者調查系統 Umami</a>
     </p>
-  </section>
-  <hr />
-  <section id="learn">
-    <h3>我想學的</h3>
-    <span>VueJS</span> <br class="mobilei" />
-    <span>Python</span> <br class="mobilei" />
-    <span>mySQL</span> <br class="mobilei" />
-    <span>NextJS</span> <br class="mobilei" />
-    <span>Expo</span> <br class="mobilei" />
-    <span>Bash</span>
   </section>
   <hr />
   <section id="stats" class="gitstats">
@@ -52,6 +112,30 @@ import NavSpace from "@/components/Other/NavSpace.vue";
 </template>
 
 <style scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+.background {
+  background-image: url("https://utfs.io/f/CCLPSN5W2HD5Hjx9nW7XEuSOswWPIZ09j31aUTe7gopyNmnk");
+  background-size: cover;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+.about {
+  text-align: center;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.38);
+}
 .logo {
   display: block;
   margin: 0 auto 2rem;
@@ -78,4 +162,67 @@ br.mobilei {
     display: none;
   }
 }
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+div.experience {
+  background-size: cover;
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s ease;
+  }
+
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+  }
+  animation: ease-in-out 100ms zoomIn;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  border-radius: 10px;
+  padding: 0.2em;
+}
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.5);
+  }
+}
+div.experience1 {
+  backdrop-filter: blur(10px);
+  padding: 1em;
+  border-radius: 5px;
+}
+.not-a-button {
+  background-color: transparent;
+  border: none;
+  color: rgba(191, 191, 191, 0.7);
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  margin-inside: 0em;
+}
 </style>
+
+
+
+
+
