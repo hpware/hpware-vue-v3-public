@@ -1,14 +1,7 @@
 <script setup></script>
 <template>
   <title>關於我 | 吳元皓的網站 v3</title>
-  <h2 class="pagetitle">關於我</h2>
-  <section id="aboutme">
-    <h3>自我介紹</h3>
-    <p>我是一個學生，在臺灣就讀有關資訊工程的五專。</p>
-    <p>熟悉 HTML, CSS , Vercel 與 Git(Hub)</p>
-    <p>我喜歡把 Prod 當測試環境。</p>
-    <hr />
-  </section>
+  <h2 class="pagetitle">更多關於我的資訊</h2>
   <section id="experience">
     <h3>經驗</h3>
     <h4>Web</h4>
