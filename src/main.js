@@ -1,4 +1,6 @@
 import "@/assets/main.css";
+import "@/assets/screen-limit.css";
+import "@/assets/dots.css";
 
 import { createApp } from "vue";
 import App from "./App.vue";
