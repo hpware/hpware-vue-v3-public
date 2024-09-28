@@ -21,7 +21,8 @@ const moreAbout = ref(false);
     />
     <h2 style="margin-top: 0em; margin-bottom: 0em;">吳元皓</h2>
   <p style="margin-top: 0em;margin-bottom: 0em;">Hi! 我是一個學生，現在在臺灣就讀有關資訊工程的五專。
-    <br/>習慣(並熟悉使用 HTML, CSS , Vercel, VueJS 與 Git & Debian Cli</p>
+    <br/>習慣(並熟悉使用 HTML, CSS , Vercel 與 Git & Debian(Ubuntu) Cli<br />
+       I use some vim btw.</p>
     <h3 ><button class="not-a-button" style="color:white" @click="moreAbout = !moreAbout">更多資訊</button></h3>
 
     <br>
@@ -47,7 +48,7 @@ const moreAbout = ref(false);
             <br />當時的我沒有放入< a > 的標籤，所以不是
             HyperLink，我當時也沒想太多就繼續使用著。
             <br />但我在這一年內增加了許多HTML &
-            CSS的知識，讓我更有信心可以在學VueJS。
+            CSS的知識，讓我更有信心可以在學VueJS 或 ReactJS。
           </p>
           <h4><del>Python</del></h4>
           <p>
@@ -71,12 +72,13 @@ const moreAbout = ref(false);
           </p>
           <hr />
           <h3>我想學的</h3>
-          <span>VueJS</span> <br class="mobilei" />
-          <span>Python</span> <br class="mobilei" />
-          <span>mySQL</span> <br class="mobilei" />
-          <span>NextJS</span> <br class="mobilei" />
-          <span>Expo</span> <br class="mobilei" />
-          <span>Bash</span>
+          <span>VueJS</span>&nbsp;
+          <span>Python</span>&nbsp;
+          <span>mySQL</span>&nbsp;
+          <span>NextJS</span>&nbsp;
+          <span>Expo</span>&nbsp;
+          <span>Bash</span>&nbsp;
+          <span>ReactJS</span>
         </div>
       </div>
     </Transition>
