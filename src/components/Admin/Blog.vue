@@ -2,7 +2,7 @@
 import { ref } from "vue";
 const success = ref("nan");
 const USER = import.meta.env.VITE_ADMINUSERNAME;
-const PWD = import.meta.env.VITE_ADMINPWD;
+const PWD = import.meta.env.VITE_ADMINPWDHASH;
 </script>
 
 <template>
