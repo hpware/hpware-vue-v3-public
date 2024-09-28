@@ -5,7 +5,7 @@ import Announcement from "@/components/Announcement.vue";
 </script>
 <template>
   <nav>
-    <h1 class="nametitle">吳元皓</h1>
+    <h1 class="nametitle">yuanh.xyz</h1>
     <Announcement />
     <div class="nav-mobile">
       <button @click="navmobile = !navmobile" class="not-a-button">選單</button>
@@ -13,7 +13,6 @@ import Announcement from "@/components/Announcement.vue";
         <div v-if="navmobile" style="color: rgba(191, 191, 191, 0.7)">
           <RouterLink to="/">首頁</RouterLink><br />
           <RouterLink to="/Go?l=blog">Blog</RouterLink><br />
-          <RouterLink to="/About">關於我</RouterLink><br />
           <RouterLink to="/Projects">專案</RouterLink><br />
           <RouterLink to="/Other">其他</RouterLink>
         </div>
@@ -22,7 +21,6 @@ import Announcement from "@/components/Announcement.vue";
     <div class="nav-desktop">
       <RouterLink to="/">首頁</RouterLink>&nbsp;
       <RouterLink to="/Go?l=blog">Blog</RouterLink>&nbsp;
-      <RouterLink to="/About">關於我</RouterLink>&nbsp;
       <RouterLink to="/Projects">專案</RouterLink>&nbsp;
       <RouterLink to="/Other">其他</RouterLink>
     </div>
