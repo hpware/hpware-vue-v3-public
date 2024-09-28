@@ -40,11 +40,12 @@ const copyhash = () => {
       <button type="submit">送出</button>
     </form>
     <div v-if="hashcreated === 'yes'">
-      <span class="smalltext">SHA256 Hash: {{ SHA256hash }}</span
+      <span class="smalltext">SHA256 Hash: <br />{{ SHA256hash }}</span
       ><button
         class="not-a-button clipboard"
         @click="copyhash()"
         id="clipboard"
+        alt="複製"
       >
         <i class="bi bi-clipboard"></i>
       </button>
@@ -66,6 +67,7 @@ input {
   border: 1px solid #ccc;
   background: rgba(16, 165, 177, 0.76);
   color: white;
+  width:300px;
 }
 .not-a-button {
   background-color: transparent;
