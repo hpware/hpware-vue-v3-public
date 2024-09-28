@@ -4,7 +4,7 @@
 
 <template>
   <div class="a">
-    <p><i class="bi bi-megaphone-fill"></i>&nbsp;🫤 <a href="https://wordpress.org/news/2024/09/wp-engine/">WP Engine is not Wordpress</a></p>
+    <p><i class="bi bi-megaphone-fill"></i>&nbsp;新 <a href="https://www.threads.net/@yh.5_26/post/DAdDRlzvpcu">Thread</a></p>
   </div>
 </template>
 

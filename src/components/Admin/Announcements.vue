@@ -1,3 +1,9 @@
+<script setup>
+import { ref } from "vue";
+const success = ref("nan");
+const USER = import.meta.env.VITE_ADMINUSERNAME;
+const PWD = import.meta.env.VITE_ADMINPWD;
+</script>
 <template>
   <form
       action="https://automation.yuanh.xyz/webhook/e8290778-734f-4ea6-81c1-858ec28273123ke-公告訊息輸入"
