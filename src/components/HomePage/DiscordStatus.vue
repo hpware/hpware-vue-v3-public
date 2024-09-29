@@ -35,12 +35,14 @@ onMounted(async () => {
       if (ActivityStatus0.type === 0) {
         const ActivityName = ref(ActivityStatus0.name);
         text.value = `Playing ${ActivityName.value}`;
+        statusIcon.value = "bi-controller .fontsize1";
       } else if (ActivityStatus0.type === 2) {
         const SpotifyCurrentlyPlayingSong = ref(ActivityStatus0.details);
         const SpotifyCurrentlyPlayingArtist = ref(ActivityStatus0.state);
         const SpotifyCurrentlyPlayingArtistComma = ref(SpotifyCurrentlyPlayingArtist.value.replace(/;/g, ", "));
-        const SpotifyCurrentlyPlaying = ref(`Listening to  ${SpotifyCurrentlyPlayingSong.value} - ${SpotifyCurrentlyPlayingArtistComma.value}`);
+        const SpotifyCurrentlyPlaying = ref(`${SpotifyCurrentlyPlayingSong.value} - ${SpotifyCurrentlyPlayingArtistComma.value}`);
         text.value = SpotifyCurrentlyPlaying.value;
+        statusIcon.value = "bi-music-note fontsize1";
       }
     }
   } catch (error) {
@@ -52,7 +54,7 @@ onMounted(async () => {
 </script>
 
 <template>
-    <span class="onlinepr"><i class="bi" :class="statusIcon" :style="statusColor" ></i>&nbsp;
+    <span class="onlinepr"><i class="bi" :class="statusIcon" :style="statusColor"></i>&nbsp;
       <span>{{ text }}</span>
     </span>
     <span v-if="error === true">Error</span>
@@ -62,5 +64,8 @@ onMounted(async () => {
 .onlinepr {
   font-size: 0.6em;
   margin-top: 0em;
+}
+.fontsize1 {
+  font-size:1.123em;
 }
 </style>
