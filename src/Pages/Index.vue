@@ -24,9 +24,9 @@ const handPickedImages = ref(false)
   <p style="margin-top: 0em;margin-bottom: 0em;">嗨! 我是一個資訊工程的五專生，我對<a href="https://unsplash.com/@hwtw" target=blank style="color:white;">攝影</a>與前端方面有興趣。
     <br/>習慣並熟悉使用 HTML, CSS , Vercel 與 Git & Debian(Ubuntu) Cli<br />
        I use some vim btw.</p>
-    <h3><a style="color:white" class="not-a-button" @click="moreAbout = !moreAbout">更多資訊</a></h3>
+    <h3><a class="not-a-button profilebutton" @click="moreAbout = !moreAbout">更多資訊</a>&nbsp;<RouterLink to="/projects" style="text-decoration: none;"class="not-a-button profilebutton">我的專案</RouterLink></h3>
     <div v-if="moreAbout" id="moreabout">
-      <span>滑動螢幕或滑鼠<i class="bi bi-mouse-fill"></i></span>
+      <span style="color:rgba(255,255,255,0.57);">滑動螢幕或滑鼠<i class="bi bi-mouse-fill"></i></span>
     </div>
 
     <br>
@@ -267,6 +267,13 @@ div.photolist {
     }
   }
   animation: ease-in-out 100ms zoomIn;
+}
+.profilebutton {
+  color: white;
+  transition: all 200ms;
+}
+.profilebutton:hover {
+  color: rgba(255, 255, 255, 0.75);
 }
 </style>
 
