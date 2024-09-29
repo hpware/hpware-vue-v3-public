@@ -10,7 +10,6 @@ const routes = Object.keys(pages).map((path) => {
     component: pages[path],
   };
 });
-
 routes.push(
   {
     path: "/.git/",
