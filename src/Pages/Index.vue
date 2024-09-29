@@ -4,7 +4,7 @@ import NavSpace from "@/components/Other/NavSpace.vue";
 import {ref} from "vue";
 // Ref
 const moreAbout = ref(false);
-const handPickedImages = ref(false);
+const handPickedImages = ref(false)
 </script>
 <template>
   <title>首頁 | 吳元皓的網站 v3</title>
@@ -25,6 +25,9 @@ const handPickedImages = ref(false);
     <br/>習慣並熟悉使用 HTML, CSS , Vercel 與 Git & Debian(Ubuntu) Cli<br />
        I use some vim btw.</p>
     <h3><a style="color:white" class="not-a-button" @click="moreAbout = !moreAbout">更多資訊</a></h3>
+    <div v-if="moreAbout" id="moreabout">
+      <span>滑動螢幕或滑鼠<i class="bi bi-mouse-fill"></i></span>
+    </div>
 
     <br>
   </section>
