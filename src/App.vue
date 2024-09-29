@@ -7,7 +7,7 @@ import Announcement from "@/components/Announcement.vue";
   <nav>
     <h1 class="nametitle">yuanh.xyz</h1>
     <Announcement />
-    <div class="nav-mobile">
+    <!--<div class="nav-mobile">
       <button @click="navmobile = !navmobile" class="not-a-button">選單</button>
       <Transition name="fade">
         <div v-if="navmobile" style="color: rgba(191, 191, 191, 0.7)">
@@ -16,7 +16,7 @@ import Announcement from "@/components/Announcement.vue";
           <RouterLink to="/Other">其他</RouterLink>
         </div>
       </Transition>
-    </div>
+    </div>-->
     <div class="nav-desktop">
       <RouterLink to="/">首頁</RouterLink>&nbsp;
       <RouterLink to="/Projects">專案</RouterLink>&nbsp;
