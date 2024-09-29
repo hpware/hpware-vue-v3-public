@@ -64,10 +64,10 @@ const handPickedImages = ref(false);
             >， <br />但Synology 不讓我把Wordpress放在 Website Root
             裡面，所以我決定要改預設的檔案來讓使用者到部落格。
             <br />在Github上發現在我的舊帳號上有一個備份
-            <a href="https://github.com/thehwtw/wncx">github.com/thehwtw/wncx</a
+            <a href="https://github.com/thehwtw/wncx">repo:thehwtw/wncx</a
             >&nbsp;
             <a href="https://old-hwweb-website.pages.dev/"
-              >網站 (Cloudflare Page Archive)</a
+              >網站 (Page Archive)</a
             >
             <br />當時的我沒有放入< a > 的標籤，所以不是
             HyperLink，我當時也沒想太多就繼續使用著。
@@ -77,6 +77,7 @@ const handPickedImages = ref(false);
           <h4><del>Python</del></h4>
           <p>
             我也在國中一年級時開始學習Python，這個也是我想學的語言，但我教學影片只看但10％的地方就放棄了。
+            <br />黑歷史: <a href="https://github.com/thehwtw/hwpythontest1">舊py程式</a>
             <br />我也之後大多數都忘記了，連 if else
             每次都要查一下，因為我比較習慣用 JavaScript 的方式 if {} else if {}
             else {}。
