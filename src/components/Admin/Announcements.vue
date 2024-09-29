@@ -6,8 +6,8 @@ const PWD = import.meta.env.VITE_ADMINPWD;
 </script>
 <template>
   <form
-      action="https://automation.yuanh.xyz/webhook/e8290778-734f-4ea6-81c1-858ec28273123ke-公告訊息輸入"
-      method="POST"
+    action="https://automation.yuanh.xyz/webhook/e8290778-734f-4ea6-81c1-858ec28273123ke-公告訊息輸入"
+    method="POST"
   >
     <input type="hidden" name="key" value="e8290778we" />
     <input type="hidden" name="username" id="username" :value="USER" />
@@ -15,11 +15,11 @@ const PWD = import.meta.env.VITE_ADMINPWD;
     <br />
     <label for="announcement">公告訊息</label><br />
     <textarea
-        name="announcement"
-        id="announcement"
-        cols="40"
-        rows="10"
-        :is="announceMsg"
+      name="announcement"
+      id="announcement"
+      cols="40"
+      rows="10"
+      :is="announceMsg"
     ></textarea>
     <br />
     <button type="submit">送出</button>

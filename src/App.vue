@@ -6,7 +6,14 @@ import { RouterLink, RouterView } from "vue-router";
 </script>
 <template>
   <nav>
-    <h1 class="nametitle">yuanh.xyz<button @click="navmobile = !navmobile" class="not-a-button navkey"><i class="bi bi-list"></i></button></h1>
+    <h1 class="nametitle">
+      yuanh.xyz<button
+        @click="navmobile = !navmobile"
+        class="not-a-button navkey"
+      >
+        <i class="bi bi-list"></i>
+      </button>
+    </h1>
     <Announcement />
     <div class="nav-mobile">
       <Transition name="fade">
@@ -18,12 +25,11 @@ import { RouterLink, RouterView } from "vue-router";
       </Transition>
     </div>
 
-      <div class="nav-desktop">
-        <RouterLink to="/">首頁</RouterLink>&nbsp;
-        <RouterLink to="/Projects">專案</RouterLink>&nbsp;
-        <RouterLink to="/Other">其他</RouterLink>
-      </div>
-
+    <div class="nav-desktop">
+      <RouterLink to="/">首頁</RouterLink>&nbsp;
+      <RouterLink to="/Projects">專案</RouterLink>&nbsp;
+      <RouterLink to="/Other">其他</RouterLink>
+    </div>
   </nav>
   <main>
     <RouterView />
@@ -94,7 +100,6 @@ div.nav-desktop {
   margin-left: 0em;
   margin-right: 0em;
   margin-top: 0em;
-
 }
 @media (min-width: 600px) {
   .navkey {

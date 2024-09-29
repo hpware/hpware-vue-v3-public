@@ -1,53 +1,53 @@
 br.mobile {
-    display: none;
+  display: none;
 }
 br.desktop {
-    display: block;
+  display: block;
 }
 span.mobile {
-    display: none;
+  display: none;
 }
 span.desktop {
-    display: block;
+  display: block;
 }
 h2.pagetitle {
-    margin-top: 0.3em;
+  margin-top: 0.3em;
 }
 h1.nametitle {
-    margin-top: 0.3em;
-    margin-bottom: 0em;
-    font-size:2.2em;
-    font-weight: bold;
-    color: aquamarine;
+  margin-top: 0.3em;
+  margin-bottom: 0em;
+  font-size: 2.2em;
+  font-weight: bold;
+  color: aquamarine;
 }
 .not-a-button {
-    background-color: transparent;
-    border: none;
-    color: rgba(191, 191, 191, 0.7);
-    font-size: 1em;
-    cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: rgba(191, 191, 191, 0.7);
+  font-size: 1em;
+  cursor: pointer;
 }
 .not-a-button:hover {
-    background-color: transparent;
+  background-color: transparent;
 }
 a.white {
-    color: white;
+  color: white;
 }
 a.white:hover {
-    color: #939393;
+  color: #939393;
 }
 
 @media (max-width: 502px) {
-    br.mobile {
-        display: block;
-    }
-    br.desktop {
-        display: none;
-    }
-    span.mobile {
-        display: block;
-    }
-    span.desktop {
-        display: none;
-    }
+  br.mobile {
+    display: block;
+  }
+  br.desktop {
+    display: none;
+  }
+  span.mobile {
+    display: block;
+  }
+  span.desktop {
+    display: none;
+  }
 }

@@ -7,10 +7,14 @@ const ENVusername = import.meta.env.VITE_ADMINUSERNAME;
 
 <template>
   <button class="not-a-button">
-    <a href="/user/accesspanel" class="button1"><i class="bi bi-house"></i> 首頁</a>
+    <a href="/user/accesspanel" class="button1"
+      ><i class="bi bi-house"></i> 首頁</a
+    >
   </button>
   <button class="not-a-button">
-    <a href="/user/logout" class="button1"><i class="bi bi-box-arrow-left"></i> 登出</a></button
+    <a href="/user/logout" class="button1"
+      ><i class="bi bi-box-arrow-left"></i> 登出</a
+    ></button
   ><br />
   <i class="bi bi-person-circle" style="font-size: 3em; color: #5ad9ef"></i
   ><br /><span style="color: #5ad9ef">{{ ENVusername }}</span

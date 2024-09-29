@@ -1,15 +1,15 @@
 @media (max-width: 600px) {
-    body {
-        font-size: 1.5em;
-    }
+  body {
+    font-size: 1.5em;
+  }
 
-    h1 {
-        font-size: 2em;
-        margin-bottom: 0;
-    }
+  h1 {
+    font-size: 2em;
+    margin-bottom: 0;
+  }
 
-    p {
-        font-size: 1em;
-        margin-bottom: 0;
-    }
+  p {
+    font-size: 1em;
+    margin-bottom: 0;
+  }
 }

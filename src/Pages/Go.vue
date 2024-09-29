@@ -44,8 +44,8 @@ if (goLink === "ig") {
     window.location.href = "/OopsError";
   }
 } else if (goLink === "gitcode-cn") {
-  window.location.href="https://gitcode.com/yuanhau";
-}else {
+  window.location.href = "https://gitcode.com/yuanhau";
+} else {
   window.location.href = "/OopsError";
 }
 </script>

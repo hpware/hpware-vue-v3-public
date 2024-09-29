@@ -67,7 +67,7 @@ input {
   border: 1px solid #ccc;
   background: rgba(16, 165, 177, 0.76);
   color: white;
-  width:300px;
+  width: 300px;
 }
 .not-a-button {
   background-color: transparent;

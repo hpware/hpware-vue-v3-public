@@ -45,7 +45,6 @@ const changePasswordAction = () => {
 const BusTrackAction = () => {
   window.location.href = "/user/area/BusTrack";
 };
-
 </script>
 
 <template>
