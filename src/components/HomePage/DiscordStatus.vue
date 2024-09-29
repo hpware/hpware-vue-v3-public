@@ -1,5 +1,8 @@
 <script setup>
-import { ref ,onMounted  } from "vue";
+// Setup
+import { onMounted, ref } from "vue";
+
+// Set Vars for this thingy
 const error = ref(false);
 const DiscordStatus = ref("");
 const statusColor = ref("");
@@ -10,9 +13,8 @@ const text = ref("");
 onMounted(async () => {
   try {
     const response = await fetch("https://api.lanyard.rest/v1/users/918723093646684180");
-    const responseData = await response.json();
-    DiscordStatus.value = responseData.data.discord_status;
-    CurrentActivites.value = responseData.data.activities.name;
+    const data = await response.json();
+    DiscordStatus.value = data.data.discord_status;
     // Status set & color
     if (DiscordStatus.value === "online") {
       statusColor.value = "color:#23a459;";
@@ -27,19 +29,20 @@ onMounted(async () => {
       statusIcon.value = "bi-circle-fill";
       text.value = "Offline";
     }
-    console.log(DiscordStatus.value);
-    console.log(statusColor.value);
-    console.log(text.value);
-    console.log(error.value);
-    console.log(statusIcon.value);
-    // Set Whatever is this
-    if (responseData.data.activities.name === "Spotify") {
-      SpotifyCurrentlyPlaying.value = responseData.data.activities.details;
-      SpotifyCurrentlyPlayingArtist.value = responseData.data.activities.state;
-      console.log(SpotifyCurrentlyPlaying.value);
-      console.log(SpotifyCurrentlyPlayingArtist.value);
+    // Activity Listening to Spotify or Playing
+    const ActivityStatus0 = data.data.activities[0];
+    if (ActivityStatus0) {
+      if (ActivityStatus0.type === 0) {
+        const ActivityName = ref(ActivityStatus0.name);
+        text.value = `Playing ${ActivityName.value}`;
+      } else if (ActivityStatus0.type === 2) {
+        const SpotifyCurrentlyPlayingSong = ref(ActivityStatus0.details);
+        const SpotifyCurrentlyPlayingArtist = ref(ActivityStatus0.state);
+        const SpotifyCurrentlyPlayingArtistComma = ref(SpotifyCurrentlyPlayingArtist.value.replace(/;/g, ", "));
+        const SpotifyCurrentlyPlaying = ref(`Listening to  ${SpotifyCurrentlyPlayingSong.value} - ${SpotifyCurrentlyPlayingArtistComma.value}`);
+        text.value = SpotifyCurrentlyPlaying.value;
+      }
     }
-
   } catch (error) {
     error.value = true;
   }
@@ -49,7 +52,7 @@ onMounted(async () => {
 </script>
 
 <template>
-    <span class="onlinepr"><i class="bi" :class="statusIcon" :style="statusColor"></i>&nbsp;
+    <span class="onlinepr"><i class="bi" :class="statusIcon" :style="statusColor" ></i>&nbsp;
       <span>{{ text }}</span>
     </span>
     <span v-if="error === true">Error</span>
