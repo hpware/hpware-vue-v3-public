@@ -2,26 +2,28 @@
 import { ref } from "vue";
 const navmobile = ref(false);
 import Announcement from "@/components/Announcement.vue";
+import { RouterLink, RouterView } from "vue-router";
 </script>
 <template>
   <nav>
-    <h1 class="nametitle">yuanh.xyz</h1>
+    <h1 class="nametitle">yuanh.xyz<button @click="navmobile = !navmobile" class="not-a-button navkey"><i class="bi bi-list"></i></button></h1>
     <Announcement />
-    <!--<div class="nav-mobile">
-      <button @click="navmobile = !navmobile" class="not-a-button">選單</button>
+    <div class="nav-mobile">
       <Transition name="fade">
         <div v-if="navmobile" style="color: rgba(191, 191, 191, 0.7)">
-          <RouterLink to="/">首頁</RouterLink><br />
-          <RouterLink to="/Projects">專案</RouterLink><br />
+          <RouterLink to="/">首頁</RouterLink>&nbsp;
+          <RouterLink to="/Projects">專案</RouterLink>&nbsp;
           <RouterLink to="/Other">其他</RouterLink>
         </div>
       </Transition>
-    </div>-->
-    <div class="nav-desktop">
-      <RouterLink to="/">首頁</RouterLink>&nbsp;
-      <RouterLink to="/Projects">專案</RouterLink>&nbsp;
-      <RouterLink to="/Other">其他</RouterLink>
     </div>
+
+      <div class="nav-desktop">
+        <RouterLink to="/">首頁</RouterLink>&nbsp;
+        <RouterLink to="/Projects">專案</RouterLink>&nbsp;
+        <RouterLink to="/Other">其他</RouterLink>
+      </div>
+
   </nav>
   <main>
     <RouterView />
@@ -81,6 +83,27 @@ div.nav-desktop {
   }
   div.nav-desktop {
     display: none;
+  }
+  h1 {
+    font-size: 2em;
+  }
+}
+.navkey {
+  font-size: 0.5em;
+  color: rgba(191, 191, 191, 0.7);
+  margin-left: 0em;
+  margin-right: 0em;
+  margin-top: 0em;
+
+}
+@media (min-width: 600px) {
+  .navkey {
+    display: none;
+  }
+}
+@media (max-width: 441px) {
+  h1 {
+    font-size: 1.5em;
   }
 }
 </style>
