@@ -2,9 +2,11 @@
 // Init
 import NavSpace from "@/components/Other/NavSpace.vue";
 import { ref } from "vue";
+import DiscordStatus from "@/components/HomePage/DiscordStatus.vue";
 // Ref
 const moreAbout = ref(false);
 const handPickedImages = ref(false);
+
 </script>
 <template>
   <title>首頁 | 吳元皓的網站 v3</title>
@@ -21,8 +23,9 @@ const handPickedImages = ref(false);
         style="margin-bottom: 0em"
       />
       <h2 style="margin-top: 0em; margin-bottom: 0em">
-        Howard (<span>元皓</span>
+        Howard (<span style="margin-bottom:0em;">元皓</span>
       </h2>
+      <DiscordStatus />
       <p style="margin-top: 0em; margin-bottom: 0em">
         嗨! 我是一個資訊工程的五專生，我對<a
           href="https://unsplash.com/@hwtw"
@@ -34,7 +37,7 @@ const handPickedImages = ref(false);
         I use some vim btw.
       </p>
       <h3>
-        <a class="not-a-button profilebutton" @click="moreAbout = !moreAbout"
+          <a class="not-a-button profilebutton" @click="moreAbout = !moreAbout"
           >更多資訊</a
         >&nbsp;<RouterLink
           to="/projects"
