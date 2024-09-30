@@ -15,6 +15,8 @@ if (goLink === "ig") {
   window.location.href = "mailto:web@yuanhau.com";
 } else if (goLink === "old-site") {
   window.location.href = "https://v2.yuanh.xyz?ref=yuanh.xyz";
+} else if (goLink === "dc") {
+  window.location.href="https://discord.com/users/918723093646684180";
 } else if (goLink === "gh-repo") {
   window.location.href =
     "https://github.com/hpware/hpware-vue-v3?ref=yuanh.xyz";

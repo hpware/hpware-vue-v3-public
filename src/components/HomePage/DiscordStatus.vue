@@ -43,6 +43,15 @@ onMounted(async () => {
         const SpotifyCurrentlyPlaying = ref(`${SpotifyCurrentlyPlayingSong.value} - ${SpotifyCurrentlyPlayingArtistComma.value}`);
         text.value = SpotifyCurrentlyPlaying.value;
         statusIcon.value = "bi-music-note fontsize1";
+      } else if (ActivityStatus0.type === 3) {
+        const Watching = ref(ActivityStatus0.name);
+        const Details = ref(ActivityStatus0.details);
+        text.value = `Watching: ${Watching.value} - ${Details.value}`;
+        text.value = SpotifyCurrentlyPlaying.value;
+        statusIcon.value = "bi-music-note fontsize1";
+      } else if (ActivityStatus0.type === 4) {
+        const ActivityName= ref(ActivityStatus0.state);
+        text.value = `Status: ${ActivityName.value}`;
       }
     }
   } catch (error) {

@@ -48,13 +48,11 @@ import { RouterLink, RouterView } from "vue-router";
     <a href="/Go?l=em" target="_blank" rel="noopener"
       ><i class="bi bi-envelope"></i></a
     >&nbsp;
+    <a href="/go?l=dc" target="_blank" rel="noopener"
+      ><i class="bi bi-discord"></i></a
+    >&nbsp;
     <p>&copy; {{ new Date().getFullYear() }} 吳元皓</p>
-    <p style="font-size: 0.6em">
-      Made for&nbsp;<i class="bi bi-browser-chrome"></i>&nbsp;<i
-        class="bi bi-browser-firefox"
-      ></i
-      >&nbsp;<i class="bi bi-browser-safari"></i>
-    </p>
+    <p style="font-size:0.6em;">想用Ai來掃描網站嗎? 請看<a href="/Scraper" style="font-size:1em;">這裡</a></p>
   </footer>
 </template>
 
