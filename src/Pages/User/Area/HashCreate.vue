@@ -42,7 +42,7 @@ const copyhash = () => {
     <div v-if="hashcreated === 'yes'">
       <span class="smalltext">SHA256 Hash: <br />{{ SHA256hash }}</span
       ><button
-        class="not-a-button clipboard"
+        class="not-a-button clipboard transit182"
         @click="copyhash()"
         id="clipboard"
         alt="複製"
@@ -87,4 +87,7 @@ input {
 .margin {
   margin-top: 0em;
 }
+  .transit182 {
+    transition: all 300ms;
+  }
 </style>
