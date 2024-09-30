@@ -106,8 +106,8 @@ const handPickedImages = ref(false);
           <p>GEPT</p>
           <span>初級 (2021)</span><br />
           <span>中級聽讀 (2022)</span>
-          <p>TOEFL</p>
-          <span>Junior Standard Test (2022)</span>
+          <p>TOEIC</p>
+          <span>Listening & Writing Score:745 (2023)</span>
           <hr />
           <h3>我想學的</h3>
           <span>VueJS</span>&nbsp; <span>Python</span>&nbsp;
