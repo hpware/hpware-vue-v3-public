@@ -307,10 +307,19 @@ div.photolist {
   animation: ease-in-out 100ms zoomIn;
 }
 .profilebutton {
-  color: white;
+  color: rgb(201, 201, 201);
   transition: all 200ms;
 }
 .profilebutton:hover {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(154, 154, 154, 0.75);
+}
+@media (max-width: 800px) {
+  .profilebutton {
+  color: rgb(201, 201, 201);
+  transition: all 200ms;
+}
+.profilebutton:hover {
+  color: rgba(154, 154, 154, 0.75);
+}
 }
 </style>
