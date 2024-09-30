@@ -39,7 +39,7 @@ const handPickedImages = ref(false);
       <h3>
           <a class="not-a-button profilebutton" @click="moreAbout = !moreAbout"
           >更多資訊</a
-        >&nbsp;<RouterLink
+        > | <RouterLink
           to="/projects"
           style="text-decoration: none"
           class="not-a-button profilebutton"
