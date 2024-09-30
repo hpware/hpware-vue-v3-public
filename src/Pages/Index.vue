@@ -39,7 +39,7 @@ const handPickedImages = ref(false);
       <h3>
           <a class="not-a-button profilebutton" @click="moreAbout = !moreAbout"
           >更多資訊</a
-        >&nbsp;<RouterLink
+        > | <RouterLink
           to="/projects"
           style="text-decoration: none"
           class="not-a-button profilebutton"
@@ -106,8 +106,8 @@ const handPickedImages = ref(false);
           <p>GEPT</p>
           <span>初級 (2021)</span><br />
           <span>中級聽讀 (2022)</span>
-          <p>TOEFL</p>
-          <span>Junior Standard Test (2022)</span>
+          <p>TOEIC</p>
+          <span>Listening & Writing Score:745 (2023)</span>
           <hr />
           <h3>我想學的</h3>
           <span>VueJS</span>&nbsp; <span>Python</span>&nbsp;
@@ -307,10 +307,19 @@ div.photolist {
   animation: ease-in-out 100ms zoomIn;
 }
 .profilebutton {
-  color: white;
+  color: rgb(201, 201, 201);
   transition: all 200ms;
 }
 .profilebutton:hover {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(154, 154, 154, 0.75);
+}
+@media (max-width: 800px) {
+  .profilebutton {
+  color: rgb(201, 201, 201);
+  transition: all 200ms;
+}
+.profilebutton:hover {
+  color: rgba(154, 154, 154, 0.75);
+}
 }
 </style>
