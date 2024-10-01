@@ -1,14 +1,15 @@
 <script setup>
 // Init
 import NavSpace from "@/components/Other/NavSpace.vue";
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import DiscordStatus from "@/components/HomePage/DiscordStatus.vue";
 // Ref
 const moreAbout = ref(false);
 const handPickedImages = ref(false);
-const name = ref("吳元皓");
-// Dynamic Name
-function abtestjs() {
+const name = ref("Default Name");
+const otherCoolText = ref("Default Text");
+// Picker
+function abcdpicker() {
   const randomValue = Math.random();
   if (randomValue < 0.25) {
     return "D";
@@ -20,16 +21,46 @@ function abtestjs() {
     return "A";
   }
 }
-const abtestvar = abtestjs();
-if (abtestvar === "A") {
-  name.value = "Yuan-Hau Wu";
-} else if (abtestvar === "B") {
-  name.value = "吳元皓";
-} else if (abtestvar === "C") {
-  name.value = "Howard Wu";
-} else if (abtestvar === "D") {
-  name.value = "元皓";
+const abtestvar = abcdpicker();
+// Dynamic Name
+//function abcdpicker1() {
+// const randomValue = (Math.random() * 4);
+// switch (randomValue) {
+//    case 0:
+//      return "D";
+//    case 1:
+//      return "B";
+//    case 2:
+//      return "C";
+//    case 3:
+//      return "A";
+//  }
+//}
+function updatename() {
+  if (abtestvar === "A") {
+    name.value = "Yuan-Hau Wu";
+  } else if (abtestvar === "B") {
+    name.value = "元皓";
+  } else if (abtestvar === "C") {
+    name.value = "Howard Wu";
+  } else {
+    name.value = "吳元皓";
+  }
 }
+updatename();
+// Dynamic Other Text aka I use some vim btw.
+function dyothertext() {
+  if (abtestvar === "A") {
+    return "HTML is not a programming language.";
+  } else if (abtestvar === "B") {
+    return "Line 很爛";
+  } else if (abtestvar === "C") {
+    return "I use some vim btw.";
+  } else if (abtestvar === "D") {
+    return "WebStorm is my main IDE of choice.";
+  }
+}
+onMounted (otherCoolText.value = dyothertext());
 </script>
 <template>
   <title>首頁 | 吳元皓的網站 v3</title>
@@ -57,7 +88,7 @@ if (abtestvar === "A") {
           >攝影</a
         >與前端方面有興趣。 <br />習慣並熟悉使用 HTML, CSS , Vercel 與 Git &
         Debian(Ubuntu) Cli<br />
-        I use some vim btw.
+        <span>{{otherCoolText}}</span>
       </p>
       <h3>
           <a class="not-a-button profilebutton" @click="moreAbout = !moreAbout"
