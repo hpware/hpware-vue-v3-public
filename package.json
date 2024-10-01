@@ -17,6 +17,7 @@
     "express": "^4.21.0",
     "posthog-js": "^1.163.0",
     "supertokens-web-js": "^0.13.0",
+    "typewriter-vue": "^0.5.19",
     "vue": "^3.4.29",
     "vue-cookie": "^1.1.4",
     "vue-meta": "^2.4.0",
