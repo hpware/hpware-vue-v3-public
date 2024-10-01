@@ -6,12 +6,35 @@ import DiscordStatus from "@/components/HomePage/DiscordStatus.vue";
 // Ref
 const moreAbout = ref(false);
 const handPickedImages = ref(false);
-
+const name = ref("吳元皓");
+// Dynamic Name
+function abtestjs() {
+  const randomValue = Math.random();
+  if (randomValue < 0.25) {
+    return "D";
+  } else if (randomValue < 0.5) {
+    return "B";
+  } else if (randomValue < 0.75) {
+    return "C";
+  } else {
+    return "A";
+  }
+}
+const abtestvar = abtestjs();
+if (abtestvar === "A") {
+  name.value = "Yuan-Hau Wu";
+} else if (abtestvar === "B") {
+  name.value = "吳元皓";
+} else if (abtestvar === "C") {
+  name.value = "Howard Wu";
+} else if (abtestvar === "D") {
+  name.value = "元皓";
+}
 </script>
 <template>
   <title>首頁 | 吳元皓的網站 v3</title>
   <meta property="og:title" content="首頁 | 吳元皓的網站 v3" />
-  <meta property="og:site_name" content="吳元皓的網站 v3" />
+  <meta property="og:site_name" content="首頁 | 吳元皓的網站 v3" />
   <div class="background">
     <section id="aboutme" class="about">
       <br />
@@ -23,7 +46,7 @@ const handPickedImages = ref(false);
         style="margin-bottom: 0em"
       />
       <h2 style="margin-top: 0em; margin-bottom: 0em">
-        Howard (<span style="margin-bottom:0em;">元皓</span>
+        <span style="margin-bottom:0em;" id="zhname">{{name}}</span>
       </h2>
       <DiscordStatus />
       <p style="margin-top: 0em; margin-bottom: 0em">
