@@ -10,6 +10,7 @@
     <a href="https://zz.yuanhau.com">檔案分享伺服器</a><br />
     <a href="https://vd.yuanhau.com">使用者調查系統</a><br />
     <a href="/ThisWebsiteUsesTheseGreatOpenSourceProjects">這個網站使用的開源專案</a><br />
+    <a href="https://gitcode.com/yuanhau">GitCode</a>"
     <br />
     <a href="/About/Bot?page=github-bot1">GitHub 機器人1</a><br />
   </p>
