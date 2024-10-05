@@ -1,10 +1,11 @@
 <script setup>
 // Setup
 import { onMounted, ref } from "vue";
-onMounted (async () => {
-  const source = await fetch("https://api.yuanh.xyz/api/announcements");
-  const data = await source.json();
-});
+async function fetchAnnouncements() {
+  const fetchURL = await fetch("https://api.github.com/repos/thecyberworld/web3-collaboration/commits?path=announcements.json");
+  const data = await fetchURL.json();
+
+}
 </script>
 
 <template>
