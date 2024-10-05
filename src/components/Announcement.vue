@@ -4,7 +4,7 @@
 
 <template>
   <div class="a">
-    <p><i class="bi bi-megaphone-fill"></i>&nbsp;新 <a href="https://www.threads.net/@yh_.5_26/post/DAik7MpTx2V">Thread</a>!</p>
+    <p><i class="bi bi-megaphone-fill"></i>&nbsp;我對學校的看法 <a href="https://maps.app.goo.gl/dEphh1TJzDuDHxsG6">連結</a></p>
   </div>
 </template>
 <style scoped>
