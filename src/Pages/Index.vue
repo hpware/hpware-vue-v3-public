@@ -82,8 +82,7 @@ onMounted (otherCoolText.value = dyothertext());
       <DiscordStatus />
       <p style="margin-top: 0em; margin-bottom: 0em">
         嗨! 我是一個資訊工程的五專生，我對<a
-          href="https://unsplash.com/@hwtw"
-          target="blank"
+          href="#photo"
           style="color: white"
           >攝影</a
         >與前端方面有興趣。 <br />習慣並熟悉使用 HTML, CSS , Vercel 與 Git &
