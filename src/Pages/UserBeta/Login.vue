@@ -31,7 +31,7 @@ const onCaptchaVerified = (token) => {
 
 // Check Login Creds
 if (cookie.get("admin-login") === `yes_${{ cookieUSERNAME }}`) {
-  window.location.href = "/user/accesspanel";
+  window.location.href = "/userbeta/accesspanel";
 }
 
 const checkUser = (event) => {

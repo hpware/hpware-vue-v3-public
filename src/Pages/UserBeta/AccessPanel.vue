@@ -10,7 +10,7 @@ if (cookie.get("admin-login") === `yes_${{ ENVusername }}`) {
   logged_in.value = "yes";
 }
 // Announcements
-import Announcements from "@/components/Admin/Announcements.vue";
+import Announcements from "@/components/Admin/Announcements2.vue";
 const AnnouncementsTransition = ref(false);
 const toggleAnnouncements = () => {
   if (BlogCreateTransition.value) {
@@ -40,17 +40,17 @@ if (logged_in === "yes") {
 }
 // Actions
 const changePasswordAction = () => {
-  window.location.href = "/user/area/hashcreate?changepwd";
+  window.location.href = "/userbeta/area/hashcreate?pc=1";
 };
 const BusTrackAction = () => {
-  window.location.href = "/user/area/BusTrack";
+  window.location.href = "/userbeta/area/BusTrack";
 };
 </script>
 
 <template>
   <title>控制台 | 吳元皓的網站 v3</title>
   <div class="user-page">
-    <h3>使用者控制台</h3>
+    <h3>使用者控制台 (Beta)</h3>
     <div v-if="logged_in === 'yes'">
       <Nav />
       <h4>普通系統:</h4>

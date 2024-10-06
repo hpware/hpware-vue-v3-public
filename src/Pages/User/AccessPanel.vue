@@ -40,7 +40,7 @@ if (logged_in === "yes") {
 }
 // Actions
 const changePasswordAction = () => {
-  window.location.href = "/user/area/hashcreate?changepwd";
+  window.location.href = "/user/area/hashcreate?pc=1";
 };
 const BusTrackAction = () => {
   window.location.href = "/user/area/BusTrack";
