@@ -1,19 +1,43 @@
 <script setup>
 import { ref } from "vue";
-const success = ref("nan");
+const success = ref("");
+const errormsg = ref("");
 const USER = import.meta.env.VITE_ADMINUSERNAME;
 const PWD = import.meta.env.VITE_ADMINPWDHASH;
+const title = ref("");
+const post = ref("");
+async function submit(event) {
+  event.preventDefault();
+  try {
+    const Request = await fetch("https://automation.yuanh.xyz/webhook-test/16f0960e-10c2-4254-9491-480bfdf463d6-createblog",
+        {
+          method:'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            key: '16f0960ed6',
+            username: USER,
+            password: PWD,
+            title: title.value,
+            post: post.value,
+          })
+        })
+    success.value = "yes";
+  } catch (error) {
+    errormsg.value = error;
+    success.value = "no";
+  }
+
+}
 </script>
 
 <template>
+  <br/>
   <form
-    action="https://automation.yuanh.xyz/webhook-test/16f0960e-10c2-4254-9491-480bfdf463d6-createblog"
+    @submit.prevent="submit();"
     Method="POST"
   >
-    <input type="hidden" name="key" value="16f0960ed6" />
-    <input type="hidden" name="username" id="username" :value="USER" />
-    <input type="hidden" name="password" id="password" :Value="PWD" />
-    <br />
     <label for="title">文章標題</label><br />
     <input type="text" name="title" id="title" required style="width: 20em" />
     <br />
@@ -22,6 +46,8 @@ const PWD = import.meta.env.VITE_ADMINPWDHASH;
     <br />
     <button type="submit">送出</button>
   </form>
+  <p v-if="success === 'yes'">文章已送出！</p>
+  <p v-if="success === 'no'">ERR: {{errormsg}}</p>
 </template>
 
 <style scoped>

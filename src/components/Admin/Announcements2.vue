@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-const success = ref("no");
+const success = ref("");
 const USER = import.meta.env.VITE_ADMINUSERNAME;
 const PWD = import.meta.env.VITE_ADMINPWDHASH;
 const announceMsg = ref("");
@@ -8,7 +8,7 @@ const errorname = ref("");
 async function sendAnnouncement(event) {
   event.preventDefault();
   try {
-  const response = await fetch("https://automation.yuanh.xyz/webhook-test/deda467e-f407-48e2-8525-8ffe62208f3c-modify-announcements", {
+  const response = await fetch("https://automation.yuanh.xyz/webhook/deda467e-f407-48e2-8525-8ffe62208f3c-modify-announcements", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
