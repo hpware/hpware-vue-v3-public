@@ -1,18 +1,38 @@
 <script setup>
 import { ref } from "vue";
-const success = ref("nan");
+const success = ref("no");
 const USER = import.meta.env.VITE_ADMINUSERNAME;
 const PWD = import.meta.env.VITE_ADMINPWDHASH;
+const announceMsg = ref("");
+const errorname = ref("");
+async function sendAnnouncement(event) {
+  event.preventDefault();
+  try {
+  const response = await fetch("https://automation.yuanh.xyz/webhook-test/deda467e-f407-48e2-8525-8ffe62208f3c-modify-announcements", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      key: "e8290778we",
+      username: USER,
+      password: PWD,
+      announcement: announceMsg.value,
+    }),
+  });
+  success.value = "yes";
+  } catch (error) {
+    success.value = "no";
+    errorname.value = error;
+    console.log("Oops! Here is the error code: " + error);
+  }
+}
 </script>
 <template>
   <form
-    action="https://automation.yuanh.xyz/webhook-test/deda467e-f407-48e2-8525-8ffe62208f3c-modify-announcements"
-    method="POST"
+      @submit="sendAnnouncement"
+      method="POST"
   >
-    <input type="hidden" name="key" value="e8290778we" />
-    <input type="hidden" name="username" id="username" :value="USER" />
-    <input type="hidden" name="password" id="password" :Value="PWD" />
-    <br />
     <label for="announcement">公告訊息</label><br />
     <textarea
       name="announcement"
@@ -24,6 +44,8 @@ const PWD = import.meta.env.VITE_ADMINPWDHASH;
     <br />
     <button type="submit">送出</button>
   </form>
+  <p v-if="success === 'yes'">公告已送出！</p>
+  <p v-if="success === 'no'">ERR: {{errorname}}</p>
 </template>
 
 <style scoped>
