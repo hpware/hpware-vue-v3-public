@@ -2,15 +2,17 @@
 import { ref, onMounted } from "vue";
 const announcement = ref("");
 const set = ref(false);
-const onoff = ref("");
+const onoff = ref(true);
 
 onMounted(getAnnouncement());
 
 async function getAnnouncement() {
   const response = await fetch("https://automation.yuanh.xyz/webhook/dad87a87-c270-49d3-ba5d-88c20246bd67-announcement");
   const data = await response.json();
-  const onoff = data[0].on_off;
   announcement.value = data[0].Annocement;
+  if (announcement.value === "null") {
+    onoff.value = false;
+  }
 }
 </script>
 
