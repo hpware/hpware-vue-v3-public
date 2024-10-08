@@ -29,6 +29,9 @@ const copyhash = () => {
       "<i class='bi bi-clipboard'></i>";
   }, 300);
 };
+if (!user_account) {
+  window.location.href='/user/login'
+}
 </script>
 <template>
   <title>Hash 產生 | 吳元皓的網站 v3</title>

@@ -11,6 +11,9 @@ import NavSpace from "@/components/Other/NavSpace.vue";
 import Nav from "@/components/UserPanel/Nav.vue";
 import Error from "@/components/UserPanel/Error.vue";
 const user_account = cookie.get("user_account");
+if (!user_account) {
+  window.location.href='/user/login'
+}
 </script>
 
 <template>

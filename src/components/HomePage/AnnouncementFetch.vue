@@ -2,9 +2,8 @@
 // Setup
 import { onMounted, ref } from "vue";
 async function fetchAnnouncements() {
-  const fetchURL = await fetch("https://api.github.com/repos/thecyberworld/web3-collaboration/commits?path=announcements.json");
+  const fetchURL = await fetch("https://automation.yuanh.xyz/webhook/dad87a87-c270-49d3-ba5d-88c20246bd67-announcement");
   const data = await fetchURL.json();
-
 }
 const msgon = ref(false);
 const msg = ref("");
