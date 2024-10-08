@@ -9,6 +9,7 @@ const displaytitle = ref(false);
 // Import Web pages
 const pages = {
   "github-bot1": () => import("@/components/Bots-Pages/GitHub-Bot1.vue"),
+  "github-bot": () => import("@/components/Bots-Pages/GitHub-Bot.vue"),
 };
 const component = ref(null);
 if (pages[page_content]) {
