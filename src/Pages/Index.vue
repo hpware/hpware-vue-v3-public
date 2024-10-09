@@ -21,7 +21,6 @@ function abcdpicker() {
     return "A";
   }
 }
-const abtestvar = abcdpicker();
 // Dynamic Name
 //function abcdpicker1() {
 // const randomValue = (Math.random() * 4);
@@ -36,6 +35,7 @@ const abtestvar = abcdpicker();
 //      return "A";
 //  }
 //}
+const abtestvar = abcdpicker();
 function updatename() {
   if (abtestvar === "A") {
     name.value = "Yuan-Hau Wu";
@@ -49,14 +49,15 @@ function updatename() {
 }
 updatename();
 // Dynamic Other Text aka I use some vim btw.
+const dytextabcd = abcdpicker();
 function dyothertext() {
-  if (abtestvar === "A") {
+  if (dytextabcd === "A") {
     return "HTML is not a programming language.";
-  } else if (abtestvar === "B") {
+  } else if (dytextabcd === "B") {
     return "Line 很爛";
-  } else if (abtestvar === "C") {
+  } else if (dytextabcd === "C") {
     return "I use some vim btw.";
-  } else if (abtestvar === "D") {
+  } else if (dytextabcd === "D") {
     return "WebStorm is my main IDE of choice.";
   }
 }
