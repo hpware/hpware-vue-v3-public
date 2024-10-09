@@ -6,8 +6,7 @@ const USER = import.meta.env.VITE_ADMINUSERNAME;
 const PWD = import.meta.env.VITE_ADMINPWDHASH;
 const title = ref("");
 const post = ref("");
-async function submit(event) {
-  event.preventDefault();
+async function submit() {
   try {
     const Request = await fetch("https://automation.yuanh.xyz/webhook-test/16f0960e-10c2-4254-9491-480bfdf463d6-createblog",
         {
@@ -35,7 +34,7 @@ async function submit(event) {
 <template>
   <br/>
   <form
-    @submit.prevent="submit();"
+    @submit="submit();"
     Method="POST"
   >
     <label for="title">文章標題</label><br />

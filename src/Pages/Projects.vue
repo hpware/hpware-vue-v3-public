@@ -16,9 +16,9 @@ import "@/assets/main.css";
       between_projects="1"
     ></Project>
     <Project
-      name="lovemusic.asia 網站"
-      website="https://lovemusic.asia"
-      about="lovemusicasia"
+      name="lovemusic.asia Web App"
+      website="https://app.lovemusic.asia"
+      about="lovemusicasiawebapp"
       between_projects="1"
     ></Project>
     <Project
@@ -45,6 +45,12 @@ import "@/assets/main.css";
   <hr />
   <section id="previous">
     <h3>舊或以取代的專案</h3>
+    <Project
+        name="lovemusic.asia 網站"
+        website="https://lovemusic.asia"
+        about="lovemusicasia"
+        between_projects="1"
+    ></Project>
     <Project
       name="舊 hwtw.cc 網站"
       ai="help"

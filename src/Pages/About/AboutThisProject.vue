@@ -15,6 +15,7 @@ const pages = {
   testconnectcenter: () =>
     import("@/components/Projects/testconnectcenter.vue"),
   linux安裝指令: () => import("@/components/Projects/Linux安裝指令.vue"),
+  lovemusicasiawebapp : () => import("@/components/Projects/LovemusicWebApp.vue"),
 };
 const component = ref(null);
 if (pages[page_content]) {

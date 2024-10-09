@@ -17,10 +17,8 @@ import Error from "@/components/UserPanel/Error.vue";
 const login = ref("no");
 const username = ref("");
 const ENVusername = import.meta.env.VITE_ADMINUSERNAME;
-const cookieUSERNAME = ref(import.meta.env.VITE_ADMINUSERNAME);
 
 const pwd = ref("");
-// const ENVpwd = SHA256(import.meta.env.VITE_ADMINPWD).toString();
 const ENVpwdHASH = import.meta.env.VITE_ADMINPWDHASH;
 
 // Captcha
@@ -30,7 +28,7 @@ const onCaptchaVerified = (token) => {
 };
 
 // Check Login Creds
-if (cookie.get("admin-login") === `yes_${{ cookieUSERNAME }}`) {
+if (cookie.get("user_account") === `yes_${ ENVusername }`) {
   window.location.href = "/userbeta/accesspanel";
 }
 
@@ -42,8 +40,8 @@ const checkUser = (event) => {
   }
   const pwdHASH = SHA256(pwd.value).toString();
   if (pwdHASH === ENVpwdHASH && username.value === ENVusername) {
-    cookie.set("admin-login", `yes_${{ username }}`, { expires: "1d" });
-    cookie.set("user_account", `${{ username }})`, { expires: "1d" });
+    cookie.set("admin-login", `yes_${ username.value }`, { expires: "1d" });
+    cookie.set("user_account", `${ username.value })`, { expires: "1d" });
     login.value = "yes";
   } else {
     login.value = "failed";
