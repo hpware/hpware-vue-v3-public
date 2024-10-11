@@ -3,8 +3,8 @@ import { ref } from "vue";
 const success = ref("");
 const USER = import.meta.env.VITE_ADMINUSERNAME;
 const PWD = import.meta.env.VITE_ADMINPWDHASH;
-const announceMsg = ref("");
 const errorname = ref("");
+const announceMsg = ref("");
 async function sendAnnouncement(event) {
   event.preventDefault();
   try {
