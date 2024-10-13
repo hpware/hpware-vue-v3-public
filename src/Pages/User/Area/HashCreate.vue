@@ -51,7 +51,7 @@ const copyhash = () => {
       </button>
       <div v-if="passwdcreate === '1'">
         <p class="smalltext margin">
-          密碼請去<a href="https://vercel.app">Vercel</a>上更改
+          密碼請去<a href="https://vercel.com/hwtws-projects/hpware-vue-v3/settings/environment-variables">Vercel</a>上更改
         </p>
       </div>
     </div>
