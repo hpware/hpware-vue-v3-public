@@ -47,6 +47,8 @@ if (goLink === "ig") {
   }
 } else if (goLink === "gitcode-cn") {
   window.location.href = "https://gitcode.com/yuanhau";
+} else if (goLink === "ypt"){
+  window.location.href = "https://link.yeolpumta.com/P3R5cGU9Z3JvdXBJbnZpdGUmaWQ9NDIzMDA2Nw=="
 } else {
   window.location.href = "/OopsError?ref=redirectpage";
 }
