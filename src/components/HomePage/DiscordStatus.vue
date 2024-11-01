@@ -24,7 +24,11 @@ onMounted(async () => {
       statusColor.value = "color:#eeb132;";
       statusIcon.value = "bi-moon-fill";
       text.value = "Idle";
-    } else {
+    } else if (DiscordStatus.value === "dnd" ){
+      statusColor.value = "color:#f03f42";
+      statusIcon.value = "bi-circle-fill";
+      text.value = "Do not Disturb";
+    }else {
       statusColor.value = "color:grey";
       statusIcon.value = "bi-circle-fill";
       text.value = "Offline";
