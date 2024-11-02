@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 const navmobile = ref(false);
-import Announcement from "@/components/Announcements2.vue";
+import Announcement from "@/components/Announcements.vue";
 import { RouterLink, RouterView } from "vue-router";
 </script>
 <template>
