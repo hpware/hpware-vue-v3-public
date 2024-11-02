@@ -22,12 +22,6 @@ import "@/assets/main.css";
       between_projects="1"
     ></Project>
     <Project
-      name="hwtw.cc 網站"
-      website="https://hwtw.cc"
-      about="hwtw-cc"
-      between_projects="1"
-    ></Project>
-    <Project
       name="AdGuard Home Block & Allow lists"
       repo="https://github.com/hpware/AdGuard-Block-list"
       website="https://gh.yuanh.xyz/adguard-block-list/"
@@ -45,6 +39,12 @@ import "@/assets/main.css";
   <hr />
   <section id="previous">
     <h3>舊或以取代的專案</h3>
+    <Project
+      name="hwtw.cc 網站"
+      website="https://hwtw.cc"
+      about="hwtw-cc"
+      between_projects="1"
+    ></Project>
     <Project
         name="lovemusic.asia 網站"
         website="https://lovemusic.asia"

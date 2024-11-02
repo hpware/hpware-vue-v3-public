@@ -1,8 +1,10 @@
-<script setup></script>
+<script setup>
+  import BlogIndex from "@/components/BlogingSystem/BlogIndex.vue";
+</script>
 
 <template>
   <title>Blog 系統 (Beta) | 吳元皓的網站 v3</title>
-  <h3>Blog 系統 (Beta)</h3>
+  <BlogIndex />
 </template>
 
 <style scoped></style>
