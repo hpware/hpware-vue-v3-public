@@ -10,7 +10,7 @@ if (cookie.get("admin-login") === `yes_${{ ENVusername }}`) {
   logged_in.value = "yes";
 }
 // Announcements
-import Announcements from "@/components/Admin/Announcements2.vue";
+import Announcements from "@/components/Admin/Announcements.vue";
 const AnnouncementsTransition = ref(false);
 const toggleAnnouncements = () => {
   if (BlogCreateTransition.value) {
