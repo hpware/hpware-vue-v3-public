@@ -12,7 +12,7 @@
         fs.readdir(dirPath, (err, files) => {
             if (err) {
                 error.value = true;
-                errorText.value = "讀取 Blog 文章時發生錯誤。";
+                errorText.value = "讀取文章時發生錯誤。";
                 return;
             } 
             blogs.value = files.filter((file) => file.endsWith(".md"));

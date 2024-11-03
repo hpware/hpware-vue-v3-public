@@ -17,6 +17,16 @@ routes.push(
     redirect: "/你在找什麼",
   },
   {
+    path: "/user",
+    name: "userpanel",
+    redirect: "/user/panel",
+  },
+  {
+    path: "/services",
+    name: "services",
+    redirect: "/services/index",
+  },
+  {
     path: "/:pathMatch(.*)*",
     name: "NotFound",
     component: () => import("@/Pages/OopsError.vue"),
