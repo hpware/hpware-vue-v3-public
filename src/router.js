@@ -29,7 +29,10 @@ routes.push(
   {
     path: "/About/AboutThisProject/:pathMatch(.*)*",
     name: "AboutThisProject",
-    redirect: `/About/AboutThisProject?page=${params.pathMatch}`,
+    redirect: to => {
+      const { params } = to;
+      return `/About/AboutThisProject?page=${params.pathMatch}`
+    }
   },
   {
     path: "/:pathMatch(.*)*",
