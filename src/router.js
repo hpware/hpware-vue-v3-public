@@ -27,6 +27,11 @@ routes.push(
     redirect: "/services/index",
   },
   {
+    path: "/About/AboutThisProject/:pathMatch(.*)*",
+    name: "AboutThisProject",
+    redirect: `/About/AboutThisProject?page=${params.pathMatch}`,
+  },
+  {
     path: "/:pathMatch(.*)*",
     name: "NotFound",
     component: () => import("@/Pages/OopsError.vue"),
