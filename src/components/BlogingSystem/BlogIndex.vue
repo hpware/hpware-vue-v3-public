@@ -1,6 +1,5 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import axios from 'axios';
 
 const blogs = ref([]);
 const error = ref(false);
@@ -14,7 +13,6 @@ onMounted(() => {
 async function getBlogs() {
     loading.value = true;
     try {
-        const response = await axios.get('/path/to/your/blogs/api');
         blogs.value = response.data;
     } catch (err) {
         error.value = true;
