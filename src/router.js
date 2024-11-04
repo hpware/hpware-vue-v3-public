@@ -27,11 +27,35 @@ routes.push(
     redirect: "/services/index",
   },
   {
-    path: "/About/AboutThisProject/:pathMatch(.*)*",
-    name: "AboutThisProject",
+    path: "/about/aboutthisproject/:pathMatch(.*)*",
+    name: "About This Project",
     redirect: to => {
       const { params } = to;
       return `/About/AboutThisProject?page=${params.pathMatch}`
+    }
+  },
+  {
+    path: "/about/bot/:pathMatch(.*)*",
+    name: "About This Bot",
+    redirect: to => {
+      const { params } = to;
+      return `/About/Bot?page=${params.pathMatch}`
+    }
+  },
+  {
+    path: "go/:pathMatch(.*)*",
+    name: "Go to Link",
+    redirect: to => {
+      const { params } = to;
+      return `/go?l=${params.pathMatch}`
+    }
+  },
+  {
+    path: "/About/Github-Org/:pathMatch(.*)*",
+    name: "About This Github Orginization",
+    redirect: to => {
+      const { params } = to;
+      return `/About/Github-Org?page=${params.pathMatch}`
     }
   },
   {
