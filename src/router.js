@@ -43,7 +43,7 @@ routes.push(
     }
   },
   {
-    path: "go/:pathMatch(.*)*",
+    path: "/go/:pathMatch(.*)*",
     name: "Go to Link",
     redirect: to => {
       const { params } = to;
