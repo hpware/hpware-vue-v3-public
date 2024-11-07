@@ -1,4 +1,4 @@
-# hpware-vue-v3
+# hpware-vue-v3 **[2024/11/7 公開版]**
 
 ## 簡介
 
